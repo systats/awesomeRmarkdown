@@ -1,0 +1,71 @@
+---
+title: "index"
+author: "Simon"
+date: "24 1 2018"
+output: 
+  #github_document
+  html_document:
+    self_contained: no
+---
+
+<style>
+body .main-container {
+    max-width: 50%;
+}
+</style>
+
+
+```{r, echo=FALSE, message=FALSE, fig.height=.1}
+source("helpers.R")
+library(shiny)
+library(shiny.semantic)
+shiny.semantic::uirender(tagList(sidebar()))
+```
+
+**Note:** this is personal summary.
+
+The repository directory to this static html file is built as follows:
+
+```{r, echo = FALSE, message = F}
+#source("src/sidebar.R")
+shiny.semantic::uirender(tagList(repo_structure()))
+```
+
+
+# Intro
+
+# Basic
+
+# YAML
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Output Formats
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Interactive Visuals
+
+## Highcharter
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# UI Extensions
+
+## Semantic UI
+<br>
+<br>
+<br>
+<br>
+<br>
