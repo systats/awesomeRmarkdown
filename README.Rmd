@@ -1,0 +1,15 @@
+---
+title: "awesomeRmarkdown"
+subtitle: "Overview of R-Markdown Use Cases"
+output: github_document
+---
+
+
+```{r echo=F}
+pacman::p_load(tidyverse)
+
+dat <- data.frame(x = "hello", y = "world")
+
+knitr::kable(dat)
+```
+
