@@ -26,6 +26,9 @@ h4 {
   font-size: 100%;
   font-weight: bold;
   font-style: italic;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
 }
 
 .watermark {
@@ -45,8 +48,6 @@ h4 {
   line-height: 20px;
 }
 
-
-
 */
 
 body .main-container {
@@ -54,7 +55,7 @@ body .main-container {
 }
 
 body { /* Normal  */
-  font-size: 14px;
+  font-size: 16px;
 }
 
 td {  /* Table  */
@@ -63,23 +64,17 @@ td {  /* Table  */
 
 h1.title {
   font-size: 28px;
-  color: DarkRed;
+  color: black;
 }
 
 h1 { /* Header 1 */
   font-size: 28px;
-  color: LightBlue;
+  color: black;
 }
 
-h2 { /* Header 2 */
-    font-size: 22px;
-  color: DarkBlue;
-}
-
-h3 { /* Header 3 */
-  font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
-  color: DarkBlue;
+h2 { /* Header 2*/
+  font-size: 28px;
+  color: #48D1CC;
 }
 
 code.r { /* Code block */
@@ -96,4 +91,16 @@ pre {
   word-wrap: normal;
   white-space: pre-wrap;
   overflow: auto;
+}
+
+
+.table th:not([align]) {
+  text-align: left;
+  font-size: 14;
+}
+
+.navbar-brand {
+    width: 100%;
+    left: 0;
+    margin-left: 1px;
 }

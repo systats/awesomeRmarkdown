@@ -65,11 +65,12 @@ repo_structure <- function(){
   )
 }
 
-
 sidebar <- function() {
-  div(class="ui sidebar inverted vertical visible menu",
+  div(class="ui sidebar inverted vertical visible menu", 
     div(class="item",
-      div(class="massive active header", h1("Awesome Rmarkdown")),
+      div(class="massive active header", 
+          h1("Awesome Rmarkdown", style = "color: #00FFE6;")
+      ),
       # div(class="menu",
       #   a(class="item", href="#header", "Header"),
       #   a(class="item", href="#divider", "Divider")

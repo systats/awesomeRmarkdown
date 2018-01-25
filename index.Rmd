@@ -1,12 +1,12 @@
 ---
-title: "Dokumentation" #"Awesome Rmarkdown"
+title: "Dokumentation"
 author: "Simon Roth"
 date: "25.01.2018"
 output: 
-  #github_document
   html_document:
     self_contained: no
     code_folding: hide
+    theme: simplex
     highlight: "espresso"
     css: src/css/style.css
 ---
@@ -57,9 +57,22 @@ The repository directory to this static html file is built as follows:
 shiny.semantic::uirender(repo_structure())
 ```
 
-# Intro
 
-# Basic
+# Reproducible Research
+
+Reproducible research is one possible product of dynamic documents, however, it is not guaranteed! Good practices for reproducible research include:
+
+* Encapsulate the full project into one directory that is supported with version control.
+* Release your code and data.
+* Document everything and use code as documentation!
+* Make figures, tables, and statistics the results of scripts and inline code.
+* Write code that uses relative paths.
+* Always Set your seed.
+* Always include session information in the code file. For example, you can use devtools::session_info().
+* To read more about reproducibility and data management check out Vince Buffalo’s Book(Buffalo, 2015).
+
+
+# Basics
 
 How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.
 
@@ -70,7 +83,7 @@ The Markdown and figure documents are then processed by the tool pandoc, which c
 
 ## YAML
 
-Der YAML header bestimmt wie das Dokument kompeliert wird. 
+Der YAML header bestimmt wie das Dokument kompeliert wird. YAML stands for “YAML Ain’t Markup Language” and is basically a nested list structure that includes the metadata of the document. It is enclosed between two lines of three dashes --- and as we saw above is automatically written by RStudio. A simple example:
 
     ---
     title: "HTML example"
@@ -113,6 +126,16 @@ dat %>%
 
 ## Markdown
 
+To fully understand RMarkdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:
+
+A plain text formatting syntax
+A software tool written in Perl.
+Converts the plain text formatting into HTML.
+
+> Main goal of Markdown: Make the syntax of the raw (pre-HTML) document as readable possible.
+
+
+
 ### Überschriften 
 
 
@@ -123,22 +146,35 @@ dat %>%
 
 ### Listen
 
-    * Item 1
-    * Item 2
-    * Item 3
-        + Item 3.1
-        + Item 3.2
-    * Item 4
+    * First bullet point
+    * Second bullet point
+        - Indented bullet point (2 tabs or 4 spaces)
+        - Another indented bullet point
+            + Further indentation (4 tabs or 8 spaces)
     
-ergibt ...
+results in ...
 
-* Item 1
-* Item 2
-* Item 3
-    + Item 3.1
-    + Item 3.2
-* Item 4
+* First bullet point
+* Second bullet point
+    - Indented bullet point (2 tabs or 4 spaces)
+    - Another indented bullet point
+        + Further indentation (4 tabs or 8 spaces)
 
+Let’s make an ordered list:
+
+    1. My first topic
+        1. Sub topic 1
+        2. Sub topic 2
+    2. My second topic
+        * Subtopic (2 tabs or 4 spaces)
+
+...
+
+1. My first topic
+    1. Sub topic 1
+    2. Sub topic 2
+2. My second topic
+    * Subtopic (2 tabs or 4 spaces)
 
 
 ### Text Highlighting
@@ -154,7 +190,11 @@ ergibt
 * **fetter Text**
 * ~~durchgestrichener Text~~
 
-### Formeln
+### Formula
+
+Superscript^2^
+
+Subscript~2~
 
 Egal welches Output-Format, Rmd kann $\LaTeX$ Formeln ausgeben. Ein beiebiger Mittelwert beträgt $\bar x = 1.32$, während eine Regressionsmodell die Form annimmt:
 
@@ -164,18 +204,45 @@ ganz einfach
 
     $$y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i $$
 
+| Description        | Code                                                               | Output                                                           |
+|--------------------|--------------------------------------------------------------------|------------------------------------------------------------------|
+| Greek letters      | `$\alpha$ $\beta$ $\gamma$$\rho$ $\sigma$ $\delta$$\epsilon$ $mu$` | $\alpha$ $\beta$ $\gamma$$\rho$ $\sigma$ $\delta$$\epsilon$ $mu$ |
+| Binary operators   | `$\times$ $\otimes$$\oplus$ $\cup$ $\cap$`                         | $\times$ $\otimes$$\oplus$ $\cup$ $\cap$                         |
+| Relation operators | `$\subset$ $\supset$ $\subseteq$ $\supseteq$`      | $\subset$ $\supset$ $\subseteq$ $\supseteq$      |
+| Others             | `$\prod$ $\sum$ $\int$ $\oint$ $\sum$ $\prod$`                                     | $\prod$ $\sum$ $\int$ $\oint$ $\sum$ $\prod$                                     |
 
-### Bilder 
+
+### Images
+
+External images
 
 ![](http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg)
 
 Für HTML hat man auch die Möglichkeit *plain* (reines) HTML zu verwenden.
 
-<img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "50%">
+<img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "80%">
+
+### Citations
+
+### Quotes
+
+    > This is for blockquotes.
+
+> This is for blockquotes.
+
+
+
+### Tables
+
+### Links
+
 
 
 
 ## R Markdown
+
+* [Rmarkdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+* [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
 <img src = "src/images/process1.png" width = "90% align = "center">
 
@@ -219,7 +286,9 @@ Folgende Chunk Options können eingestellt werden:
 
 * [HTML Text Formatting **w3schools**](https://www.w3schools.com/html/html_formatting.asp)
 
+## Notebooks
 
+* [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
 
 ## Flexdashboard
 
@@ -227,11 +296,17 @@ Folgende Chunk Options können eingestellt werden:
 
 ## Website
 
+* [R Markdown Websites
+](http://rmarkdown.rstudio.com/rmarkdown_websites.html)
+
 ## Blogs
 
 ## Slides
 
 ## Books
+
+* [Bookdown](https://bookdown.org/)
+
 
 ## Music Notes
 
