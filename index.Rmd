@@ -1,11 +1,13 @@
 ---
-title: "index"
-author: "Simon"
-date: "24 1 2018"
+title: "Dokumentation" #"Awesome Rmarkdown"
+author: "Simon Roth"
+date: "25.01.2018"
 output: 
   #github_document
   html_document:
     self_contained: no
+    code_folding: hide
+    highlight: "espresso"
 ---
 
 <!-- <style> -->
@@ -13,7 +15,6 @@ output:
 <!--     max-width: 50%; -->
 <!-- } -->
 <!-- </style> -->
-
 
 <style type="text/css">
 body .main-container {
@@ -26,12 +27,12 @@ td {  /* Table  */
   font-size: 8px;
 }
 h1.title {
-  font-size: 38px;
+  font-size: 28px;
   color: DarkRed;
 }
 h1 { /* Header 1 */
   font-size: 28px;
-  color: DarkBlue;
+  color: LightBlue;
 }
 h2 { /* Header 2 */
     font-size: 22px;
@@ -47,7 +48,11 @@ code.r{ /* Code block */
 }
 pre { /* Code block - determines code spacing between lines */
     font-size: 14px;
+    background: #262525;
 }
+<!-- pre code.bash { -->
+<!--   background: lightyellow; -->
+<!-- } -->
 </style>
 
 
@@ -59,11 +64,17 @@ library(shiny.semantic)
 shiny.semantic::uirender(tagList(sidebar()))
 ```
 
-**Note:** this is personal summary.
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+**Note:** this is personal summary. Some other more strictly updated awsome projects. Inspired by
+
+* [Awesome R](https://awesome-r.com/) 
+* [Awesome Machine Learning](https://github.com/josephmisiti/awesome-machine-learning) 
+
 
 The repository directory to this static html file is built as follows:
 
-```{r, echo = FALSE, message = F}
+```{r, echo = T, message = F}
 #source("src/sidebar.R")
 shiny.semantic::uirender(tagList(repo_structure()))
 ```
@@ -73,21 +84,40 @@ shiny.semantic::uirender(tagList(repo_structure()))
 
 # Basic
 
-# YAML
+## Markdown
 
-<br>
-<br>
-<br>
-<br>
-<br>
+## YAML
+
+Der YAML header bestimmt wie das Dokument kompeliert wird. 
+
+```{r, eval = F, echo = T}
+---
+title: "HTML example"
+output: html_document
+---
+```
+
+<img src = "images/yaml.png" width = "60% align = "center">
+
+Zur Auswahl stehen verschiedene Standardformate. Some code and output. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.
+
 
 # Output Formats
 
-<br>
-<br>
-<br>
-<br>
-<br>
+* [Overview of Output Formats](http://rmarkdown.rstudio.com/formats.html)
+
+How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.
+
+The Markdown and figure documents are then processed by the tool pandoc, which converts the Markdown file into an html file, with the figures embedded.
+
+![](images/rmd_outputs.png)
+
+## Flexdashboard
+
+## Mindmaps
+
+## Blogs
+
 
 # Interactive Visuals
 
@@ -106,3 +136,14 @@ shiny.semantic::uirender(tagList(repo_structure()))
 <br>
 <br>
 <br>
+
+<!-- <!--- tabset ---> -->
+<!-- ## Sales Report {.tabset} -->
+<!-- ### By Product -->
+
+<!-- (tab content) -->
+
+<!-- ### By Region -->
+
+<!-- (tab content) -->
+

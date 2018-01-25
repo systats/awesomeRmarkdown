@@ -12,7 +12,7 @@
 <meta name="author" content="Simon" />
 
 
-<title>index</title>
+<title>Dokumentation</title>
 
 <script src="index_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,29 +21,59 @@
 <script src="index_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="index_files/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="index_files/navigation-1.1/tabsets.js"></script>
-<link href="index_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="index_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="index_files/navigation-1.1/codefolding.js"></script>
 <script src="index_files/htmlwidgets-0.9/htmlwidgets.js"></script>
 <link href="index_files/Semantic UI-2.2.3/semantic.css" rel="stylesheet" />
 <script src="index_files/Semantic UI-2.2.3/semantic.js"></script>
 <script src="index_files/uirender-binding-0.1.1/uirender.js"></script>
 
+
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+div.sourceCode {
+  overflow-x: visible;
+}
+</style>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
   }
 </style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
 
 
 <style type="text/css">
@@ -112,6 +142,14 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 
@@ -120,11 +158,19 @@ $(document).ready(function () {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
-<h1 class="title toc-ignore">index</h1>
+
+<h1 class="title toc-ignore">Dokumentation</h1>
 <h4 class="author"><em>Simon</em></h4>
-<h4 class="date"><em>24 1 2018</em></h4>
+<h4 class="date"><em>25.01.2018</em></h4>
 
 </div>
 
@@ -145,12 +191,12 @@ td {  /* Table  */
   font-size: 8px;
 }
 h1.title {
-  font-size: 38px;
+  font-size: 28px;
   color: DarkRed;
 }
 h1 { /* Header 1 */
   font-size: 28px;
-  color: DarkBlue;
+  color: LightBlue;
 }
 h2 { /* Header 2 */
     font-size: 22px;
@@ -166,27 +212,64 @@ code.r{ /* Code block */
 }
 pre { /* Code block - determines code spacing between lines */
     font-size: 14px;
+    background: #262525;
 }
+<!-- pre code.bash { -->
+<!--   background: lightyellow; -->
+<!-- } -->
 </style>
-<div id="htmlwidget-381c5ffcbd8096fd7008" style="width:672px;height:9.6px;" class="uirender html-widget"></div>
-<script type="application/json" data-for="htmlwidget-381c5ffcbd8096fd7008">{"x":{"ui":"<div class=\"ui sidebar inverted vertical visible menu\">\n  <div class=\"item\">\n    <div class=\"massive active header\">awesome-Rmarkdown<\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Intro<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#basic\">Basic<\/a>\n        <a class=\"item\" href=\"#yaml\">YAML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Output Formats<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#card\">PDF<\/a>\n        <a class=\"item\" href=\"#output-formats\">HTML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <a href=\"#interactive-visuals\">\n        <div class=\"active header\">Interactive Visuals<\/div>\n      <\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#highcharter\">Highcharter<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">UI Extensions<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#semantic-ui\">Semantic UI<\/a>\n        <a class=\"item\" href=\"#sunburst\">Sunburst<\/a>\n        <a class=\"item\" href=\"#tabset\">...<\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>\n<script>$('.ui.labeled.icon.sidebar')\n          .sidebar('toggle')\n          ;<\/script>"},"evals":[],"jsHooks":[]}</script>
-<p><strong>Note:</strong> this is personal summary.</p>
+<div id="htmlwidget-d296aa2b940d8b55c8b5" style="width:672px;height:9.6px;" class="uirender html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d296aa2b940d8b55c8b5">{"x":{"ui":"<div class=\"ui sidebar inverted vertical visible menu\">\n  <div class=\"item\">\n    <div class=\"massive active header\">\n      <h1>Awesome Rmarkdown<\/h1>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Intro<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#basic\">Basic<\/a>\n        <a class=\"item\" href=\"#yaml\">YAML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Output Formats<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#card\">PDF<\/a>\n        <a class=\"item\" href=\"#output-formats\">HTML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <a href=\"#interactive-visuals\">\n        <div class=\"active header\">Interactive Visuals<\/div>\n      <\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#highcharter\">Highcharter<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">UI Extensions<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#semantic-ui\">Semantic UI<\/a>\n        <a class=\"item\" href=\"#sunburst\">Sunburst<\/a>\n        <a class=\"item\" href=\"#tabset\">...<\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <img class=\"ui centered tiny image\" src=\"images/ruserlogo_real.png\"/>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
+<p><a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a></p>
+<p><strong>Note:</strong> this is personal summary. Some other more strictly updated awsome projects. Inspired by</p>
+<ul>
+<li><a href="https://awesome-r.com/">Awesome R</a></li>
+<li><a href="https://github.com/josephmisiti/awesome-machine-learning">Awesome Machine Learning</a></li>
+</ul>
 <p>The repository directory to this static html file is built as follows:</p>
-<div id="htmlwidget-f75936bc784dec0fb8fe" style="width:672px;height:480px;" class="uirender html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f75936bc784dec0fb8fe">{"x":{"ui":"<div class=\"ui list\">\n  <div class=\"item\">\n    <i class=\"folder icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">src<\/div>\n      <div class=\"description\">Source files for project<\/div>\n      <div class=\"list\">\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">site<\/div>\n            <div class=\"description\">Your site's theme<\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">themes<\/div>\n            <div class=\"description\">Packaged theme files<\/div>\n            <div class=\"list\">\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">default<\/div>\n                  <div class=\"description\">Default packaged theme<\/div>\n                <\/div>\n              <\/div>\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">my_theme<\/div>\n                  <div class=\"description\">Packaged themes are also available in this folder<\/div>\n                <\/div>\n              <\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"file icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">theme.config<\/div>\n            <div class=\"description\">Config file for setting packaged themes<\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.Rmd<\/div>\n      <div class=\"description\">This is the Script for this static Website.<\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.html<\/div>\n      <div class=\"description\">Compiled version of index.Rmd<\/div>\n    <\/div>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#source(&quot;src/sidebar.R&quot;)</span>
+shiny.semantic<span class="op">::</span><span class="kw">uirender</span>(<span class="kw">tagList</span>(<span class="kw">repo_structure</span>()))</code></pre></div>
+<div id="htmlwidget-62ec93fd10f9c284d364" style="width:672px;height:480px;" class="uirender html-widget"></div>
+<script type="application/json" data-for="htmlwidget-62ec93fd10f9c284d364">{"x":{"ui":"<div class=\"ui list\">\n  <div class=\"item\">\n    <i class=\"folder icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">src<\/div>\n      <div class=\"description\">Source files for project<\/div>\n      <div class=\"list\">\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">site<\/div>\n            <div class=\"description\">Your site's theme<\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">themes<\/div>\n            <div class=\"description\">Packaged theme files<\/div>\n            <div class=\"list\">\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">default<\/div>\n                  <div class=\"description\">Default packaged theme<\/div>\n                <\/div>\n              <\/div>\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">my_theme<\/div>\n                  <div class=\"description\">Packaged themes are also available in this folder<\/div>\n                <\/div>\n              <\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"file icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">theme.config<\/div>\n            <div class=\"description\">Config file for setting packaged themes<\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.Rmd<\/div>\n      <div class=\"description\">This is the Script for this static Website.<\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.html<\/div>\n      <div class=\"description\">Compiled version of index.Rmd<\/div>\n    <\/div>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
 <div id="intro" class="section level1">
 <h1>Intro</h1>
 </div>
 <div id="basic" class="section level1">
 <h1>Basic</h1>
+<div id="markdown" class="section level2">
+<h2>Markdown</h2>
 </div>
-<div id="yaml" class="section level1">
-<h1>YAML</h1>
-<p><br> <br> <br> <br> <br></p>
+<div id="yaml" class="section level2">
+<h2>YAML</h2>
+<p>Der YAML header bestimmt wie das Dokument kompeliert wird.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">---</span>
+title<span class="op">:</span><span class="st"> &quot;HTML example&quot;</span>
+output<span class="op">:</span><span class="st"> </span>html_document
+<span class="op">---</span></code></pre></div>
+<p><img src = "images/yaml.png" width = "60% align = "center"></p>
+<p>Zur Auswahl stehen verschiedene Standardformate. Some code and output. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.</p>
+</div>
 </div>
 <div id="output-formats" class="section level1">
 <h1>Output Formats</h1>
-<p><br> <br> <br> <br> <br></p>
+<ul>
+<li><a href="http://rmarkdown.rstudio.com/formats.html">Overview of Output Formats</a></li>
+</ul>
+<p>How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.</p>
+<p>The Markdown and figure documents are then processed by the tool pandoc, which converts the Markdown file into an html file, with the figures embedded.</p>
+<div class="figure">
+<img src="images/rmd_outputs.png" />
+
+</div>
+<div id="flexdashboard" class="section level2">
+<h2>Flexdashboard</h2>
+</div>
+<div id="mindmaps" class="section level2">
+<h2>Mindmaps</h2>
+</div>
+<div id="blogs" class="section level2">
+<h2>Blogs</h2>
+</div>
 </div>
 <div id="interactive-visuals" class="section level1">
 <h1>Interactive Visuals</h1>
@@ -200,6 +283,11 @@ pre { /* Code block - determines code spacing between lines */
 <div id="semantic-ui" class="section level2">
 <h2>Semantic UI</h2>
 <p><br> <br> <br> <br> <br></p>
+<!-- <!--- tabset --->
+<p>–&gt; <!-- ## Sales Report {.tabset} --> <!-- ### By Product --></p>
+<!-- (tab content) -->
+<!-- ### By Region -->
+<!-- (tab content) -->
 </div>
 </div>
 

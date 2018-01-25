@@ -1,8 +1,15 @@
 ---
 title: "awesomeRmarkdown"
 subtitle: "Overview of R-Markdown Use Cases"
-output: github_document
+output: 
+  github_document:
+    toc: true
+    toc_depth: 2
 ---
+
+# Some Information
+
+Please visit the corresponding [website](https://systats.github.io/awesomeRmarkdown). There you find a live version of this Rmarkdown Website hosted on github as well as additional information on Rmarkdown.
 
 
 ```{r echo=F}
@@ -12,4 +19,10 @@ dat <- data.frame(x = "hello", y = "world")
 
 knitr::kable(dat)
 ```
+
+
+
+
+
+
 
