@@ -6,7 +6,7 @@ output:
   html_document:
     self_contained: no
     code_folding: hide
-    theme: simplex
+    theme: flatly
     highlight: "espresso"
     css: src/css/style.css
 ---
@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = T, message = F, error = F, warning = F)
 ```{r packages, echo = F, message = F, fig.height = .1}
 source("src/semantic_ui.R")
 
-pacman::p_load(rmarkdown, shiny, shiny.semantic, dplyr, ggplot2)
+pacman::p_load(rmarkdown, shiny, shiny.semantic, dplyr, ggplot2, emo, tidyverse)
 #library(shiny)
 ```
 
@@ -72,7 +72,8 @@ Reproducible research is one possible product of dynamic documents, however, it 
 * To read more about reproducibility and data management check out Vince Buffalo’s Book(Buffalo, 2015).
 
 
-# Basics
+* `ggplot2`
+* [``](https://github.com/hadley/healthyr_preamble)
 
 How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.
 
@@ -80,6 +81,16 @@ The Markdown and figure documents are then processed by the tool pandoc, which c
 
 <img src = "src/images/process2.png" width = "60% align = "center">
 
+
+# Rmarkdown
+
+To fully understand RMarkdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:
+
+A plain text formatting syntax
+A software tool written in Perl.
+Converts the plain text formatting into HTML.
+
+> Main goal of Markdown: Make the syntax of the raw (pre-HTML) document as readable possible.
 
 ## YAML
 
@@ -90,12 +101,9 @@ Der YAML header bestimmt wie das Dokument kompeliert wird. YAML stands for “YA
     output: html_document
     ---
 
-
-<img src = "src/images/yaml.png" width = "90% align = "center">
-
 * [Overview of Output Formats](http://rmarkdown.rstudio.com/formats.html)
 
-![](images/rmd_outputs.png)
+![](src/images/rmd_outputs.png)
 
 
 Zur Auswahl stehen verschiedene Standardformate. Some code and output. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.
@@ -124,19 +132,14 @@ dat %>%
   formattable::format_table(caption = "Standard Outputs delivered by Rmarkdown")
 ```
 
-## Markdown
+## Output Formats
 
-To fully understand RMarkdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:
 
-A plain text formatting syntax
-A software tool written in Perl.
-Converts the plain text formatting into HTML.
-
-> Main goal of Markdown: Make the syntax of the raw (pre-HTML) document as readable possible.
+* [HTML Text Formatting **w3schools**](https://www.w3schools.com/html/html_formatting.asp)
 
 
 
-### Überschriften 
+## Sections 
 
 
     # 1. Überschrift (section)
@@ -144,7 +147,7 @@ Converts the plain text formatting into HTML.
     ### 3. Unterunterüberschrift (subsubsection)
 
 
-### Listen
+## Lists
 
     * First bullet point
     * Second bullet point
@@ -177,7 +180,7 @@ Let’s make an ordered list:
     * Subtopic (2 tabs or 4 spaces)
 
 
-### Text Highlighting
+## Text Highlighting
 
     *kurisver Text*
     **fetter Text**
@@ -190,7 +193,7 @@ ergibt
 * **fetter Text**
 * ~~durchgestrichener Text~~
 
-### Formula
+## Formula
 
 Superscript^2^
 
@@ -212,7 +215,7 @@ ganz einfach
 | Others             | `$\prod$ $\sum$ $\int$ $\oint$ $\sum$ $\prod$`                                     | $\prod$ $\sum$ $\int$ $\oint$ $\sum$ $\prod$                                     |
 
 
-### Images
+## Images
 
 External images
 
@@ -222,44 +225,95 @@ Für HTML hat man auch die Möglichkeit *plain* (reines) HTML zu verwenden.
 
 <img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "80%">
 
-### Citations
-
-### Quotes
+## Quotes
 
     > This is for blockquotes.
 
 > This is for blockquotes.
 
 
+## Links
 
-### Tables
-
-### Links
-
-
-
-
-## R Markdown
 
 * [Rmarkdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 * [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 
-<img src = "src/images/process1.png" width = "90% align = "center">
+<!-- <img src = "src/images/process1.png" width = "90% align = "center"> -->
 
+## Themes
+
++ Code Highlighting
+
+
+
+
+## Citations
+
+It’s also possible to include a bibliography file in the YAML header. Bibliography formats that are readable by Pandoc include the following:
+
+* MODS (.mods)
+* BibLaTeX	(.bib)
+* BibTeX	(.bibtex)
+* RIS	(.ris)
+* EndNote	(.enl)
+* EndNote XML	(.xml)
+* ISI	(.wos)
+* MEDLINE	(.medline)
+* Copac	(.copac)
+* JSON citeproc	(.json) 
+
+To create a bibliography in RMarkdown, two files are needed:
+
+1. A bibliography file with the information about each reference. A citation style language (CSL) to describe how to format the reference. 
+2. An example YAML header with a bibliography and a citation style language (CSL) file:
+
+    ```
+    output: html_document
+    bibliography: bibliography.bib
+    csl: nature.csl
+    ```
+
+If you would like to cite R packages, knitr even includes a function called write_bib() that creates a .bib entries for R packages. It will even write it to a file!
+
+
+```{r, eval = F}
+#knitr::write_bib(file = "r-packages.bib") 
+knitr::write_bib(c("knitr", "ggplot2"), file = "r-packages2.bib")
+```
+
+
+
+# R Code
+
+## Embed Code
+
+There are 2 ways to embed code within an RMarkdown document.
+
+Inline Code: Brief code that takes place during the written part of the document.
+
+Code Chunks: Parts of the document that includes several lines of program or analysis code. It may render a plot or table, calculate summary statistics, load packages, etc.
 
     ```{r chunkname, echo=T}`r ''`
     1 + 1
     ```
+   
+While knitr must be run within the R environment, it also supports many other programming languages including:
 
-Um ein Summary, Exzerpt oder Abstract zu schreiben und dabei die Möglichkeit zu haben sowohl Grafiken, Tabellen, Links als auch eigene Statistiken direkt mit einzubinden ist die Anwendung von `R Markdown` optimal. R Markdown ist eine Variante von [Markdown](http://kbroman.org/knitr_knutshell/pages/markdown.html) und ist wichtig für eine robuste und nachvollziebare Dokumentation wenn man Daten arbeitet. `R Markdown` wurde mit den Grundgedanken konzipiert, so einfach lesbar und schreibbar wie möglich zu sein.
+* Python
+* Ruby
+* Haskell
+* shell scripts
+* Perl
+* SAS
+* TikZ
+* Graphviz
+* C++
+* ...
 
-`R Markdown` umfasst `R Code Chunks` und wird in Verbindung mit `knitr` verwendet um ganz einfach **tolle, reproducible, web-basierte Reports** zu erstellen. `knitr`ist ein `R package` welches den Zweck hat R-Code in `LaTex`Dokumente einzubinden. Hier spart man sich also das "copy-paste" und generiert reproducible research. Wenn ein Dokument `knit`wird, sendet R Markdown ein `.Rmd` - Dokument an `knitr`, was wiederum alle `R Code Chunks` ausführt und ein neues Markdown `.md` - Dokument (inklusiv Code und Output) erstellt. Anschließend wird das generierte Dokument mit Hilfe von `pandoc`, http://pandoc.org/, zum finalen Output abgewickelt. 
+However, we have to install the corresponding software package in advance to use an engine.
 
-[mehr Infos zu `knitr`](https://yihui.name/knitr/)  
 
-<!-- <center><img src = "images/outs13.png" width= "80%"></center>   -->
-
-Folgende Chunk Options können eingestellt werden:
+### Chunk Options
 
 | option     | default | effect                                                    |
 |------------|---------|-----------------------------------------------------------|
@@ -275,16 +329,80 @@ Folgende Chunk Options können eingestellt werden:
 | fig.width  | 7       | Width in inches for plots created in chunk                |
 | fig.height | 7       | Height in inches for plots created in chunk               |
 
+### Global Options
+
+You may wish to have the same chunk settings throughout your document and so it might be nice to type options once instead of always re-typing it for each chunk. To do so, you can set global chunk options at the top of the document.
+
+    ```
+    knitr::opts_chunk$set(
+      echo = F, 
+      eval = T, 
+      message = F,
+      warning = F, 
+      fig.path = "images/",
+      fig.width = 12, 
+      fig.height = 8
+    )
+    ```
 
 
+## Emo[ji]
 
-# Output Formats
+* [Wickham github](https://github.com/hadley/emo)
+* [Emoji List](http://emoji.muan.co/)
+* `r emo::ji("smile")` `r emo::ji("eu")` `r emo::ji("female")`
 
-## PDF
+    ```
+    emo::ji("smile")
+    ```
 
-## HTML
+## Tables
 
-* [HTML Text Formatting **w3schools**](https://www.w3schools.com/html/html_formatting.asp)
+Depending on your desired output format different packages for beautiful tables are at disposal. 
+
+* `formattable`:
+* `kable`
+    + `kableExtra`
+* `pander`
+* `xtable`
+* `stargazer`
+* `sjPlot`
+
+
+* https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+
+```{r formatkable}
+library(formattable)
+library(kableExtra)
+
+mtcars[1:5, 1:4] %>%
+  mutate(
+    car = row.names(.),
+    mpg = color_tile("white", "orange")(mpg),
+    cyl = cell_spec(cyl, "html", angle = (1:5)*60, 
+                    background = "red", color = "white", align = "center"),
+    disp = ifelse(disp > 200,
+                  cell_spec(disp, "html", color = "red", bold = T),
+                  cell_spec(disp, "html", color = "green", italic = T)),
+    hp = color_bar("lightgreen")(hp)
+  ) %>%
+  select(car, everything()) %>%
+  kable("html", escape = F) %>%
+  kable_styling("hover", full_width = F) %>%
+  column_spec(5, width = "3cm") %>%
+  add_header_above(c(" ", "Hello" = 2, "World" = 2))
+```
+
+
+## HTML Widgets
+
+* [Showcases](http://www.htmlwidgets.org/showcase_datatables.html)
+
+Here’s the link to find your favorite theme of all the [80 knitr highlight themes](http://animation.r-forge.r-project.org/knitr/).
+
+
+# Standalone Projects
 
 ## Notebooks
 
@@ -310,25 +428,9 @@ Folgende Chunk Options können eingestellt werden:
 
 ## Music Notes
 
-
-# Interactive Visuals
-
-## Highcharter
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
 # UI Extensions
 
 ## Semantic UI
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <!-- <!--- tabset ---> -->
 <!-- ## Sales Report {.tabset} -->
@@ -340,3 +442,9 @@ Folgende Chunk Options können eingestellt werden:
 
 <!-- (tab content) -->
 
+
+```{r}
+devtools::session_info(pkgs = "Rmarkdown")
+```
+
+<!-- # References -->
