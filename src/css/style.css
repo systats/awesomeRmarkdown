@@ -1,0 +1,99 @@
+/* body {
+  font-family: Calibri, helvetica, sans-serif;
+}
+
+h1 {
+  color: rgb(103, 106, 78);
+  font-size: 127%;
+}
+
+.title {
+  color: rgb(87, 200, 245);
+  margin-right: 200px;
+}
+
+h2 {
+  color: rgb(67, 167, 226);
+  font-size: 121%;
+}
+
+h3 {
+  font-size: 109%;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 100%;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.watermark {
+  opacity: 0.2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 500%;
+  color: #00407d;
+}
+
+
+.body {
+  max-width: 1000px;
+  margin: auto;
+  margin-left:100px;
+  line-height: 20px;
+}
+
+
+
+*/
+
+body .main-container {
+  max-width: 50%;
+}
+
+body { /* Normal  */
+  font-size: 14px;
+}
+
+td {  /* Table  */
+  font-size: 8px;
+}
+
+h1.title {
+  font-size: 28px;
+  color: DarkRed;
+}
+
+h1 { /* Header 1 */
+  font-size: 28px;
+  color: LightBlue;
+}
+
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+
+h3 { /* Header 3 */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+}
+
+code.r { /* Code block */
+    font-size: 14px;
+    padding: 10px;
+    border: 0;
+}
+
+pre {
+  color: #444;
+  padding: 10px;
+  background: #eee;
+  border: 0;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  overflow: auto;
+}

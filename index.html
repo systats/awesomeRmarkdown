@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Simon" />
+<meta name="author" content="Simon Roth" />
 
 
 <title>Dokumentation</title>
@@ -103,6 +103,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="src/css/style.css" type="text/css" />
 
 </head>
 
@@ -169,57 +170,22 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Dokumentation</h1>
-<h4 class="author"><em>Simon</em></h4>
+<h4 class="author"><em>Simon Roth</em></h4>
 <h4 class="date"><em>25.01.2018</em></h4>
 
 </div>
 
 
-<!-- <style> -->
-<!-- body .main-container { -->
-<!--     max-width: 50%; -->
-<!-- } -->
+<!-- Software and Data Carpentry are both communities of volunteer researchers, educators, and more who develop lessons and teach two day workshops on basic computing and data skills for researchers. Software Carpentry focuses on helping researchers develop foundational computational skills; Data Carpentry focuses on helping researchers work effectively with their data through its lifecycle. -->
+<!-- The main goal of these organizations is not to teach specific skills, per se - although those are covered - but rather, to convey best practices that will enable researchers to be more productive and do better research. -->
+<!-- Just like learning a new language, a musical instrument, or a sport, teaching is a skill that requires practice and feedback. -->
+<!-- The key tool for R is knitr, which allows you to create a document that is a mixture of text and some chunks of code. When the document is processed by knitr, chunks of R code will be executed, and graphs or other results inserted. -->
+<!-- This sort of idea has been called “literate programming”. -->
+<!-- <style type="text/css"> -->
+<!-- ... -->
 <!-- </style> -->
-<style type="text/css">
-body .main-container {
-    max-width: 50%;
-}
-body{ /* Normal  */
-      font-size: 14px;
-  }
-td {  /* Table  */
-  font-size: 8px;
-}
-h1.title {
-  font-size: 28px;
-  color: DarkRed;
-}
-h1 { /* Header 1 */
-  font-size: 28px;
-  color: LightBlue;
-}
-h2 { /* Header 2 */
-    font-size: 22px;
-  color: DarkBlue;
-}
-h3 { /* Header 3 */
-  font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
-  color: DarkBlue;
-}
-code.r{ /* Code block */
-    font-size: 14px;
-}
-pre { /* Code block - determines code spacing between lines */
-    font-size: 14px;
-    background: #262525;
-}
-<!-- pre code.bash { -->
-<!--   background: lightyellow; -->
-<!-- } -->
-</style>
-<div id="htmlwidget-d296aa2b940d8b55c8b5" style="width:672px;height:9.6px;" class="uirender html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d296aa2b940d8b55c8b5">{"x":{"ui":"<div class=\"ui sidebar inverted vertical visible menu\">\n  <div class=\"item\">\n    <div class=\"massive active header\">\n      <h1>Awesome Rmarkdown<\/h1>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Intro<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#basic\">Basic<\/a>\n        <a class=\"item\" href=\"#yaml\">YAML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Output Formats<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#card\">PDF<\/a>\n        <a class=\"item\" href=\"#output-formats\">HTML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <a href=\"#interactive-visuals\">\n        <div class=\"active header\">Interactive Visuals<\/div>\n      <\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#highcharter\">Highcharter<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">UI Extensions<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#semantic-ui\">Semantic UI<\/a>\n        <a class=\"item\" href=\"#sunburst\">Sunburst<\/a>\n        <a class=\"item\" href=\"#tabset\">...<\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <img class=\"ui centered tiny image\" src=\"images/ruserlogo_real.png\"/>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-44e5847ae1ad2f3123f4" style="width:672px;height:9.6px;" class="uirender html-widget"></div>
+<script type="application/json" data-for="htmlwidget-44e5847ae1ad2f3123f4">{"x":{"ui":"<div class=\"ui sidebar inverted vertical visible menu\">\n  <div class=\"item\">\n    <div class=\"massive active header\">\n      <h1>Awesome Rmarkdown<\/h1>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Intro<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#basic\">Basic<\/a>\n        <a class=\"item\" href=\"#yaml\">YAML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Output Formats<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#card\">PDF<\/a>\n        <a class=\"item\" href=\"#output-formats\">HTML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <a href=\"#interactive-visuals\">\n        <div class=\"active header\">Interactive Visuals<\/div>\n      <\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#highcharter\">Highcharter<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">UI Extensions<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#semantic-ui\">Semantic UI<\/a>\n        <a class=\"item\" href=\"#sunburst\">Sunburst<\/a>\n        <a class=\"item\" href=\"#tabset\">...<\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <img class=\"ui centered tiny image\" src=\"src/images/logo.png\"/>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
 <p><a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a></p>
 <p><strong>Note:</strong> this is personal summary. Some other more strictly updated awsome projects. Inspired by</p>
 <ul>
@@ -227,39 +193,277 @@ pre { /* Code block - determines code spacing between lines */
 <li><a href="https://github.com/josephmisiti/awesome-machine-learning">Awesome Machine Learning</a></li>
 </ul>
 <p>The repository directory to this static html file is built as follows:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#source(&quot;src/sidebar.R&quot;)</span>
-shiny.semantic<span class="op">::</span><span class="kw">uirender</span>(<span class="kw">tagList</span>(<span class="kw">repo_structure</span>()))</code></pre></div>
-<div id="htmlwidget-62ec93fd10f9c284d364" style="width:672px;height:480px;" class="uirender html-widget"></div>
-<script type="application/json" data-for="htmlwidget-62ec93fd10f9c284d364">{"x":{"ui":"<div class=\"ui list\">\n  <div class=\"item\">\n    <i class=\"folder icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">src<\/div>\n      <div class=\"description\">Source files for project<\/div>\n      <div class=\"list\">\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">site<\/div>\n            <div class=\"description\">Your site's theme<\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">themes<\/div>\n            <div class=\"description\">Packaged theme files<\/div>\n            <div class=\"list\">\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">default<\/div>\n                  <div class=\"description\">Default packaged theme<\/div>\n                <\/div>\n              <\/div>\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">my_theme<\/div>\n                  <div class=\"description\">Packaged themes are also available in this folder<\/div>\n                <\/div>\n              <\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"file icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">theme.config<\/div>\n            <div class=\"description\">Config file for setting packaged themes<\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.Rmd<\/div>\n      <div class=\"description\">This is the Script for this static Website.<\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.html<\/div>\n      <div class=\"description\">Compiled version of index.Rmd<\/div>\n    <\/div>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">shiny.semantic<span class="op">::</span><span class="kw">uirender</span>(<span class="kw">repo_structure</span>())</code></pre></div>
+<div id="htmlwidget-09365cb99749a17c11be" style="width:672px;height:480px;" class="uirender html-widget"></div>
+<script type="application/json" data-for="htmlwidget-09365cb99749a17c11be">{"x":{"ui":"<div class=\"ui list\">\n  <div class=\"item\">\n    <i class=\"folder icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">src<\/div>\n      <div class=\"description\">Source files for project<\/div>\n      <div class=\"list\">\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">site<\/div>\n            <div class=\"description\">Your site's theme<\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">themes<\/div>\n            <div class=\"description\">Packaged theme files<\/div>\n            <div class=\"list\">\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">default<\/div>\n                  <div class=\"description\">Default packaged theme<\/div>\n                <\/div>\n              <\/div>\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">my_theme<\/div>\n                  <div class=\"description\">Packaged themes are also available in this folder<\/div>\n                <\/div>\n              <\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"file icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">theme.config<\/div>\n            <div class=\"description\">Config file for setting packaged themes<\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.Rmd<\/div>\n      <div class=\"description\">This is the Script for this static Website.<\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.html<\/div>\n      <div class=\"description\">Compiled version of index.Rmd<\/div>\n    <\/div>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
 <div id="intro" class="section level1">
 <h1>Intro</h1>
 </div>
 <div id="basic" class="section level1">
 <h1>Basic</h1>
-<div id="markdown" class="section level2">
-<h2>Markdown</h2>
-</div>
+<p>How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.</p>
+<p>The Markdown and figure documents are then processed by the tool pandoc, which converts the Markdown file into an html file, with the figures embedded.</p>
+<p><img src = "src/images/process2.png" width = "60% align = "center"></p>
 <div id="yaml" class="section level2">
 <h2>YAML</h2>
 <p>Der YAML header bestimmt wie das Dokument kompeliert wird.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">---</span>
-title<span class="op">:</span><span class="st"> &quot;HTML example&quot;</span>
-output<span class="op">:</span><span class="st"> </span>html_document
-<span class="op">---</span></code></pre></div>
-<p><img src = "images/yaml.png" width = "60% align = "center"></p>
+<pre><code>---
+title: &quot;HTML example&quot;
+output: html_document
+---</code></pre>
+<p><img src = "src/images/yaml.png" width = "90% align = "center"></p>
+<ul>
+<li><a href="http://rmarkdown.rstudio.com/formats.html">Overview of Output Formats</a></li>
+</ul>
+<div class="figure">
+<img src="images/rmd_outputs.png" />
+
+</div>
 <p>Zur Auswahl stehen verschiedene Standardformate. Some code and output. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.</p>
+<table class="table table-condensed">
+<caption>
+Standard Outputs delivered by Rmarkdown
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Code
+</th>
+<th style="text-align:right;">
+Output
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+html_document
+</td>
+<td style="text-align:right;">
+HTML
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+pdf_document
+</td>
+<td style="text-align:right;">
+PDF
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+word_document
+</td>
+<td style="text-align:right;">
+Microsoft Word (.docx)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+odt_document
+</td>
+<td style="text-align:right;">
+Open Document Text
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+rtf_document
+</td>
+<td style="text-align:right;">
+Rich Text Format
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+md_document
+</td>
+<td style="text-align:right;">
+Markdown (converts R to md)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+github_document
+</td>
+<td style="text-align:right;">
+Markdown (github special)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+ioslides_presentation
+</td>
+<td style="text-align:right;">
+ioslides (HTML 5 slideshow)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+slidy_presentation
+</td>
+<td style="text-align:right;">
+slidy (HTML 5 slideshow)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+beamer_presentation
+</td>
+<td style="text-align:right;">
+beamer (pdf slideshow)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="markdown" class="section level2">
+<h2>Markdown</h2>
+<div id="uberschriften" class="section level3">
+<h3>Überschriften</h3>
+<pre><code># 1. Überschrift (section)
+## 2. Unterüberschrift (subsection)
+### 3. Unterunterüberschrift (subsubsection)</code></pre>
+</div>
+<div id="listen" class="section level3">
+<h3>Listen</h3>
+<pre><code>* Item 1
+* Item 2
+* Item 3
+    + Item 3.1
+    + Item 3.2
+* Item 4</code></pre>
+<p>ergibt …</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ul>
+<li>Item 3.1</li>
+<li>Item 3.2</li>
+</ul></li>
+<li>Item 4</li>
+</ul>
+</div>
+<div id="text-highlighting" class="section level3">
+<h3>Text Highlighting</h3>
+<pre><code>*kurisver Text*
+**fetter Text**
+~~durchgestrichener Text~~</code></pre>
+<p>ergibt</p>
+<ul>
+<li><em>kurisver Text</em></li>
+<li><strong>fetter Text</strong></li>
+<li><del>durchgestrichener Text</del></li>
+</ul>
+</div>
+<div id="formeln" class="section level3">
+<h3>Formeln</h3>
+<p>Egal welches Output-Format, Rmd kann <span class="math inline">\(\LaTeX\)</span> Formeln ausgeben. Ein beiebiger Mittelwert beträgt <span class="math inline">\(\bar x = 1.32\)</span>, während eine Regressionsmodell die Form annimmt:</p>
+<p><span class="math display">\[y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i \]</span></p>
+<p>ganz einfach</p>
+<pre><code>$$y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i $$</code></pre>
+</div>
+<div id="bilder" class="section level3">
+<h3>Bilder</h3>
+<div class="figure">
+<img src="http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg" />
+
+</div>
+<p>Für HTML hat man auch die Möglichkeit <em>plain</em> (reines) HTML zu verwenden.</p>
+<p><img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "50%"></p>
+</div>
+</div>
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p><img src = "src/images/process1.png" width = "90% align = "center"></p>
+<pre><code>```{r chunkname, echo=T}
+1 + 1
+```</code></pre>
+<p>Um ein Summary, Exzerpt oder Abstract zu schreiben und dabei die Möglichkeit zu haben sowohl Grafiken, Tabellen, Links als auch eigene Statistiken direkt mit einzubinden ist die Anwendung von <code>R Markdown</code> optimal. R Markdown ist eine Variante von <a href="http://kbroman.org/knitr_knutshell/pages/markdown.html">Markdown</a> und ist wichtig für eine robuste und nachvollziebare Dokumentation wenn man Daten arbeitet. <code>R Markdown</code> wurde mit den Grundgedanken konzipiert, so einfach lesbar und schreibbar wie möglich zu sein.</p>
+<p><code>R Markdown</code> umfasst <code>R Code Chunks</code> und wird in Verbindung mit <code>knitr</code> verwendet um ganz einfach <strong>tolle, reproducible, web-basierte Reports</strong> zu erstellen. <code>knitr</code>ist ein <code>R package</code> welches den Zweck hat R-Code in <code>LaTex</code>Dokumente einzubinden. Hier spart man sich also das “copy-paste” und generiert reproducible research. Wenn ein Dokument <code>knit</code>wird, sendet R Markdown ein <code>.Rmd</code> - Dokument an <code>knitr</code>, was wiederum alle <code>R Code Chunks</code> ausführt und ein neues Markdown <code>.md</code> - Dokument (inklusiv Code und Output) erstellt. Anschließend wird das generierte Dokument mit Hilfe von <code>pandoc</code>, <a href="http://pandoc.org/" class="uri">http://pandoc.org/</a>, zum finalen Output abgewickelt.</p>
+<p><a href="https://yihui.name/knitr/">mehr Infos zu <code>knitr</code></a></p>
+<!-- <center><img src = "images/outs13.png" width= "80%"></center>   -->
+<p>Folgende Chunk Options können eingestellt werden:</p>
+<table>
+<thead>
+<tr class="header">
+<th>option</th>
+<th>default</th>
+<th>effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>eval</td>
+<td>TRUE</td>
+<td>Whether to evaluate the code and include its results</td>
+</tr>
+<tr class="even">
+<td>echo</td>
+<td>TRUE</td>
+<td>Whether to display code along with its results</td>
+</tr>
+<tr class="odd">
+<td>warning</td>
+<td>TRUE</td>
+<td>Whether to display warnings</td>
+</tr>
+<tr class="even">
+<td>error</td>
+<td>FALSE</td>
+<td>Whether to display errors</td>
+</tr>
+<tr class="odd">
+<td>message</td>
+<td>TRUE</td>
+<td>Whether to display messages</td>
+</tr>
+<tr class="even">
+<td>tidy</td>
+<td>FALSE</td>
+<td>Whether to reformat code in a tidy way when displaying it</td>
+</tr>
+<tr class="odd">
+<td>results</td>
+<td>markup</td>
+<td>“markup”, “asis”, “hold”, or “hide”</td>
+</tr>
+<tr class="even">
+<td>cache</td>
+<td>FALSE</td>
+<td>Whether to cache results for future renders</td>
+</tr>
+<tr class="odd">
+<td>comment</td>
+<td>##</td>
+<td>Comment character to preface results with</td>
+</tr>
+<tr class="even">
+<td>fig.width</td>
+<td>7</td>
+<td>Width in inches for plots created in chunk</td>
+</tr>
+<tr class="odd">
+<td>fig.height</td>
+<td>7</td>
+<td>Height in inches for plots created in chunk</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="output-formats" class="section level1">
 <h1>Output Formats</h1>
+<div id="pdf" class="section level2">
+<h2>PDF</h2>
+</div>
+<div id="html" class="section level2">
+<h2>HTML</h2>
 <ul>
-<li><a href="http://rmarkdown.rstudio.com/formats.html">Overview of Output Formats</a></li>
+<li><a href="https://www.w3schools.com/html/html_formatting.asp">HTML Text Formatting <strong>w3schools</strong></a></li>
 </ul>
-<p>How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.</p>
-<p>The Markdown and figure documents are then processed by the tool pandoc, which converts the Markdown file into an html file, with the figures embedded.</p>
-<div class="figure">
-<img src="images/rmd_outputs.png" />
-
 </div>
 <div id="flexdashboard" class="section level2">
 <h2>Flexdashboard</h2>
@@ -267,8 +471,20 @@ output<span class="op">:</span><span class="st"> </span>html_document
 <div id="mindmaps" class="section level2">
 <h2>Mindmaps</h2>
 </div>
+<div id="website" class="section level2">
+<h2>Website</h2>
+</div>
 <div id="blogs" class="section level2">
 <h2>Blogs</h2>
+</div>
+<div id="slides" class="section level2">
+<h2>Slides</h2>
+</div>
+<div id="books" class="section level2">
+<h2>Books</h2>
+</div>
+<div id="music-notes" class="section level2">
+<h2>Music Notes</h2>
 </div>
 </div>
 <div id="interactive-visuals" class="section level1">
