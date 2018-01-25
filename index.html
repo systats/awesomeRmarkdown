@@ -14,7 +14,7 @@
 
 <title>Dokumentation</title>
 
-<script src="index_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="index_files/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="index_files/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="index_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -26,6 +26,57 @@
 <link href="index_files/Semantic UI-2.2.3/semantic.css" rel="stylesheet" />
 <script src="index_files/Semantic UI-2.2.3/semantic.js"></script>
 <script src="index_files/uirender-binding-0.1.1/uirender.js"></script>
+<script src="index_files/datatables-binding-0.2/datatables.js"></script>
+<link href="index_files/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="index_files/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="index_files/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="index_files/proj4js-2.3.15/proj4.js"></script>
+<link href="index_files/highcharts-6.0.3/css/motion.css" rel="stylesheet" />
+<script src="index_files/highcharts-6.0.3/highcharts.js"></script>
+<script src="index_files/highcharts-6.0.3/highcharts-3d.js"></script>
+<script src="index_files/highcharts-6.0.3/highcharts-more.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/stock.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/heatmap.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/treemap.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/annotations.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/boost.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/data.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/drag-panes.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/drilldown.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/funnel.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/item-series.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/offline-exporting.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/overlapping-datalabels.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/parallel-coordinates.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/sankey.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/solid-gauge.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/streamgraph.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/sunburst.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/vector.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/wordcloud.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/xrange.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/exporting.js"></script>
+<script src="index_files/highcharts-6.0.3/modules/export-data.js"></script>
+<script src="index_files/highcharts-6.0.3/maps/modules/map.js"></script>
+<script src="index_files/highcharts-6.0.3/plugins/export-csv.js"></script>
+<script src="index_files/highcharts-6.0.3/plugins/grouped-categories.js"></script>
+<script src="index_files/highcharts-6.0.3/plugins/motion.js"></script>
+<script src="index_files/highcharts-6.0.3/plugins/multicolor_series.js"></script>
+<script src="index_files/highcharts-6.0.3/custom/reset.js"></script>
+<script src="index_files/highcharts-6.0.3/custom/symbols-extra.js"></script>
+<script src="index_files/highcharts-6.0.3/custom/text-symbols.js"></script>
+<link href="index_files/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="index_files/highchart-binding-0.5.0.9999/highchart.js"></script>
+<link href="index_files/leaflet-0.7.7/leaflet.css" rel="stylesheet" />
+<script src="index_files/leaflet-0.7.7/leaflet.js"></script>
+<link href="index_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<link href="index_files/leaflet-label-0.2.2/leaflet.label.css" rel="stylesheet" />
+<script src="index_files/leaflet-label-0.2.2/leaflet.label.js"></script>
+<script src="index_files/Proj4Leaflet-0.7.2/proj4-compressed.js"></script>
+<script src="index_files/Proj4Leaflet-0.7.2/proj4leaflet.js"></script>
+<script src="index_files/leaflet-binding-1.1.0/leaflet.js"></script>
+<script src="index_files/leaflet-providers-1.0.27/leaflet-providers.js"></script>
+<script src="index_files/leaflet-providers-plugin-1.1.0/leaflet-providers-plugin.js"></script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -33,38 +84,38 @@
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
 td.sourceCode { padding-left: 5px; }
-pre, code { color: #bdae9d; background-color: #2a211c; }
-code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
-code > span.dt { text-decoration: underline; } /* DataType */
-code > span.dv { color: #44aa43; } /* DecVal */
-code > span.bn { color: #44aa43; } /* BaseN */
-code > span.fl { color: #44aa43; } /* Float */
-code > span.ch { color: #049b0a; } /* Char */
-code > span.st { color: #049b0a; } /* String */
-code > span.co { color: #0066ff; font-style: italic; } /* Comment */
-code > span.al { color: #ffff00; } /* Alert */
-code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
-code > span.er { color: #ffff00; font-weight: bold; } /* Error */
-code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
-code > span.cn { } /* Constant */
-code > span.sc { color: #049b0a; } /* SpecialChar */
-code > span.vs { color: #049b0a; } /* VerbatimString */
-code > span.ss { color: #049b0a; } /* SpecialString */
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
 code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
 code > span.ex { } /* Extension */
-code > span.pp { font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
-code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
-code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 div.sourceCode {
   overflow-x: visible;
 }
@@ -184,8 +235,8 @@ $(document).ready(function () {
 <!-- <style type="text/css"> -->
 <!-- ... -->
 <!-- </style> -->
-<div id="htmlwidget-9e99ead51e81e943a996" style="width:672px;height:9.6px;" class="uirender html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9e99ead51e81e943a996">{"x":{"ui":"<div class=\"ui sidebar inverted vertical visible menu\">\n  <div class=\"item\">\n    <div class=\"massive active header\">\n      <h1 style=\"color: #00FFE6;\">Awesome Rmarkdown<\/h1>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Intro<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#basic\">Basic<\/a>\n        <a class=\"item\" href=\"#yaml\">YAML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Output Formats<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#card\">PDF<\/a>\n        <a class=\"item\" href=\"#output-formats\">HTML<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <a href=\"#interactive-visuals\">\n        <div class=\"active header\">Interactive Visuals<\/div>\n      <\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#highcharter\">Highcharter<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">UI Extensions<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#semantic-ui\">Semantic UI<\/a>\n        <a class=\"item\" href=\"#sunburst\">Sunburst<\/a>\n        <a class=\"item\" href=\"#tabset\">...<\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <img class=\"ui centered tiny image\" src=\"src/images/logo.png\"/>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-74382c21f5c8d1b3bb67" style="width:672px;height:9.6px;" class="uirender html-widget"></div>
+<script type="application/json" data-for="htmlwidget-74382c21f5c8d1b3bb67">{"x":{"ui":"<div class=\"ui sidebar inverted vertical visible menu\">\n  <div class=\"item\">\n    <div class=\"massive active header\">\n      <h1 style=\"color: #00FFE6;\">Awesome Rmarkdown<\/h1>\n    <\/div>\n    <div class=\"item\">\n      <a class=\"active header\" href=\"#reproducible-research\">Reproducible Research<\/a>\n      <br/>\n      <a class=\"active header\" href=\"#rmarkdown\">(R) Markdown<\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#yaml\">YAML<\/a>\n        <a class=\"item\" href=\"#headers\">Headers<\/a>\n        <a class=\"item\" href=\"#tabbed\">Tabbed Sections<\/a>\n        <a class=\"item\" href=\"#lists\">Lists<\/a>\n        <a class=\"item\" href=\"#highlight\">Text Highlighting<\/a>\n        <a class=\"item\" href=\"#formula\">Formula<\/a>\n        <a class=\"item\" href=\"#images\">Images<\/a>\n        <a class=\"item\" href=\"#quotes\">Quotes<\/a>\n        <a class=\"item\" href=\"#links\">Links<\/a>\n        <a class=\"item\" href=\"#themes\">Themes<\/a>\n        <a class=\"item\" href=\"#citations\">Citations<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">R Code<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#embed\">Embed Code<\/a>\n        <a class=\"item\" href=\"#emo\">Emo[ji]<\/a>\n        <a class=\"item\" href=\"#tables\">Tables<\/a>\n        <a class=\"item\" href=\"#html-widgets\">HTML Widgets<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <a href=\"#projects\">\n        <div class=\"active header\">Standalone Projects<\/div>\n      <\/a>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#highcharter\">Highcharter<\/a>\n      <\/div>\n    <\/div>\n    <div class=\"item\">\n      <div class=\"active header\">Advanced<\/div>\n      <div class=\"menu\">\n        <a class=\"item\" href=\"#semantic-ui\">Semantic UI<\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <img class=\"ui centered tiny image\" src=\"src/images/logo.png\"/>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
 <p><a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a></p>
 <p><strong>Note:</strong> this is personal summary. Some other more strictly updated awsome projects. Inspired by</p>
 <ul>
@@ -194,8 +245,8 @@ $(document).ready(function () {
 </ul>
 <p>The repository directory to this static html file is built as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">shiny.semantic<span class="op">::</span><span class="kw">uirender</span>(<span class="kw">repo_structure</span>())</code></pre></div>
-<div id="htmlwidget-87c616fd6b6ade8898f0" style="width:672px;height:480px;" class="uirender html-widget"></div>
-<script type="application/json" data-for="htmlwidget-87c616fd6b6ade8898f0">{"x":{"ui":"<div class=\"ui list\">\n  <div class=\"item\">\n    <i class=\"folder icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">src<\/div>\n      <div class=\"description\">Source files for project<\/div>\n      <div class=\"list\">\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">site<\/div>\n            <div class=\"description\">Your site's theme<\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">themes<\/div>\n            <div class=\"description\">Packaged theme files<\/div>\n            <div class=\"list\">\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">default<\/div>\n                  <div class=\"description\">Default packaged theme<\/div>\n                <\/div>\n              <\/div>\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">my_theme<\/div>\n                  <div class=\"description\">Packaged themes are also available in this folder<\/div>\n                <\/div>\n              <\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"file icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">theme.config<\/div>\n            <div class=\"description\">Config file for setting packaged themes<\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.Rmd<\/div>\n      <div class=\"description\">This is the Script for this static Website.<\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.html<\/div>\n      <div class=\"description\">Compiled version of index.Rmd<\/div>\n    <\/div>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-22d3ea93edd2d21e9954" style="width:672px;height:480px;" class="uirender html-widget"></div>
+<script type="application/json" data-for="htmlwidget-22d3ea93edd2d21e9954">{"x":{"ui":"<div class=\"ui list\">\n  <div class=\"item\">\n    <i class=\"folder icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">src<\/div>\n      <div class=\"description\">Source files for project<\/div>\n      <div class=\"list\">\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">site<\/div>\n            <div class=\"description\">Your site's theme<\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"folder icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">themes<\/div>\n            <div class=\"description\">Packaged theme files<\/div>\n            <div class=\"list\">\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">default<\/div>\n                  <div class=\"description\">Default packaged theme<\/div>\n                <\/div>\n              <\/div>\n              <div class=\"item\">\n                <i class=\"folder icon icon\"><\/i>\n                <div class=\"content\">\n                  <div class=\"header\">my_theme<\/div>\n                  <div class=\"description\">Packaged themes are also available in this folder<\/div>\n                <\/div>\n              <\/div>\n            <\/div>\n          <\/div>\n        <\/div>\n        <div class=\"item\">\n          <i class=\"file icon icon\"><\/i>\n          <div class=\"content\">\n            <div class=\"header\">theme.config<\/div>\n            <div class=\"description\">Config file for setting packaged themes<\/div>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.Rmd<\/div>\n      <div class=\"description\">This is the Script for this static Website.<\/div>\n    <\/div>\n  <\/div>\n  <div class=\"item\">\n    <i class=\"file icon icon\"><\/i>\n    <div class=\"content\">\n      <div class=\"header\">index.html<\/div>\n      <div class=\"description\">Compiled version of index.Rmd<\/div>\n    <\/div>\n  <\/div>\n<\/div>"},"evals":[],"jsHooks":[]}</script>
 <div id="reproducible-research" class="section level1">
 <h1>Reproducible Research</h1>
 <p>Reproducible research is one possible product of dynamic documents, however, it is not guaranteed! Good practices for reproducible research include:</p>
@@ -207,17 +258,21 @@ $(document).ready(function () {
 <li>Write code that uses relative paths.</li>
 <li>Always Set your seed.</li>
 <li>Always include session information in the code file. For example, you can use devtools::session_info().</li>
-<li><p>To read more about reproducibility and data management check out Vince Buffalo’s Book(Buffalo, 2015).</p></li>
+<li>To read more about reproducibility and data management check out Vince Buffalo’s Book(Buffalo, 2015).</li>
 <li><code>ggplot2</code></li>
-<li><p><a href="https://github.com/hadley/healthyr_preamble">``</a></p></li>
+<li><a href="https://github.com/hadley/healthyr_preamble">``</a></li>
 </ul>
 <p>How things get compiled? When you press the “Knit HTML” button, the R Markdown document is processed by knitr and a plain Markdown document is produced (as well as, potentially, a set of figure files): the R code is executed and replaced by both the input and the output; if figures are produced, links to those figures are included.</p>
 <p>The Markdown and figure documents are then processed by the tool pandoc, which converts the Markdown file into an html file, with the figures embedded.</p>
 <p><img src = "src/images/process2.png" width = "60% align = "center"></p>
 </div>
 <div id="rmarkdown" class="section level1">
-<h1>Rmarkdown</h1>
-<p>To fully understand RMarkdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:</p>
+<h1>(R)Markdown</h1>
+<p>Philosophy …</p>
+<blockquote>
+<p>A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber.</p>
+</blockquote>
+<p>To fully understand R Markdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:</p>
 <p>A plain text formatting syntax A software tool written in Perl. Converts the plain text formatting into HTML.</p>
 <blockquote>
 <p>Main goal of Markdown: Make the syntax of the raw (pre-HTML) document as readable possible.</p>
@@ -236,7 +291,7 @@ output: html_document
 <img src="src/images/rmd_outputs.png" />
 
 </div>
-<p>Zur Auswahl stehen verschiedene Standardformate. Some code and output. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.</p>
+<p>Zur Auswahl stehen verschiedene Standardformate. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.</p>
 <table class="table table-condensed">
 <caption>
 Standard Outputs delivered by Rmarkdown
@@ -335,20 +390,48 @@ beamer (pdf slideshow)
 </tbody>
 </table>
 </div>
-<div id="output-formats" class="section level2">
-<h2>Output Formats</h2>
-<ul>
-<li><a href="https://www.w3schools.com/html/html_formatting.asp">HTML Text Formatting <strong>w3schools</strong></a></li>
-</ul>
+<div id="headers" class="section level2">
+<h2>Headers</h2>
+<p><strong>Setext-style</strong>: A setext-style header is a line of text underlined with a row of = signs (level 1) or - signs (for level 2). This often used in Dashboard applications.</p>
+<pre><code>A level-one header
+==================
+
+A level-two header
+------------------</code></pre>
+<p><strong>ATX-style</strong>: extend up to six <code>#</code> signs at the beginning of the line is the header level. ATX can include text formatting.</p>
+<pre><code>## A level-one header
+
+### A level-two header *emphasis*</code></pre>
+<p>A ATX Header allows header_attributes which can be assigned using the following syntax at the end of the header line:</p>
+<pre><code># Section {#identifier .class .class key=value key=value}    </code></pre>
+<p>If you specified the YAML option <code>number_sections: true</code> you can disable the numbering for a specific header:</p>
+<pre><code># My header {-}</code></pre>
+<p>is just the same as</p>
+<pre><code># My header {.unnumbered}</code></pre>
 </div>
-<div id="sections" class="section level2">
-<h2>Sections</h2>
-<pre><code># 1. Überschrift (section)
-## 2. Unterüberschrift (subsection)
-### 3. Unterunterüberschrift (subsubsection)</code></pre>
+<div id="tabbed" class="section level2 tabset">
+<h2>Tabbed Sections</h2>
+<div id="content" class="section level3">
+<h3>Content</h3>
+<div class="figure">
+<img src="https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/26195772_1804502472955084_5942461602219045405_n.jpg?oh=8403c13075dcccd2415a1becdf5f1e94&amp;oe=5AEF4107" />
+
 </div>
-<div id="lists" class="section level2">
-<h2>Lists</h2>
+<p>Please like our Meme Page on Facebook and Twitter to get the latest update on the mimetic warfare.</p>
+</div>
+<div id="code" class="section level3">
+<h3>Code</h3>
+<p>This is the code for this double tab</p>
+<pre><code>### Tabbed Sections {.tabset}
+
+#### Content
+
+Content 1 ...
+
+#### Code
+
+Content 2 ...</code></pre>
+<p><br> ## Lists</p>
 <pre><code>* First bullet point
 * Second bullet point
     - Indented bullet point (2 tabs or 4 spaces)
@@ -385,26 +468,29 @@ beamer (pdf slideshow)
 </ul></li>
 </ol>
 </div>
-<div id="text-highlighting" class="section level2">
+</div>
+<div id="highlight" class="section level2">
 <h2>Text Highlighting</h2>
 <pre><code>*kurisver Text*
 **fetter Text**
 ~~durchgestrichener Text~~</code></pre>
-<p>ergibt</p>
 <ul>
 <li><em>kurisver Text</em></li>
 <li><strong>fetter Text</strong></li>
 <li><del>durchgestrichener Text</del></li>
 </ul>
+<p>If you work in a HTML document, you can use raw HTML in your Markdown File. A brief introduction can be found [here](* <a href="https://www.w3schools.com/html/html_formatting.asp">HTML Text Formatting <strong>w3schools</strong></a>.</p>
 </div>
 <div id="formula" class="section level2">
 <h2>Formula</h2>
-<p>Superscript<sup>2</sup></p>
-<p>Subscript<sub>2</sub></p>
-<p>Egal welches Output-Format, Rmd kann <span class="math inline">\(\LaTeX\)</span> Formeln ausgeben. Ein beiebiger Mittelwert beträgt <span class="math inline">\(\bar x = 1.32\)</span>, während eine Regressionsmodell die Form annimmt:</p>
+<p>In Markdown you can do easy Subscript<sub>2</sub> and Superscript<sup>2</sup> with any additional concepts. If you want to write full mathematical equations MathJax is waiting for you.</p>
+<p>Any Rmd format is able to incorporate <span class="math inline">\(\LaTeX\)</span> formula in the document. You can do inline code like <em>the average income in this region is</em> <span class="math inline">\(\bar x = 1.32\)</span>. This is done by</p>
+<pre><code>*the average income in this region is* $\bar x = 1.32$.</code></pre>
+<p>You can also create standalone formula</p>
 <p><span class="math display">\[y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i \]</span></p>
-<p>ganz einfach</p>
+<p>This is easily done …</p>
 <pre><code>$$y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i $$</code></pre>
+<p>Some other Inspirations can be found in the following table or on these links…</p>
 <table style="width:100%;">
 <colgroup>
 <col width="13%" />
@@ -444,13 +530,23 @@ beamer (pdf slideshow)
 </div>
 <div id="images" class="section level2">
 <h2>Images</h2>
-<p>External images</p>
+<p>You can source external images also for all RMD output formats via (weblink)</p>
+<pre><code>![](http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg)</code></pre>
 <div class="figure">
 <img src="http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg" />
 
 </div>
-<p>Für HTML hat man auch die Möglichkeit <em>plain</em> (reines) HTML zu verwenden.</p>
-<p><img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "80%"></p>
+<p>or from your local image folder:</p>
+<pre><code>![](src/images/squirrel.jpg)</code></pre>
+<p><img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "70%"></p>
+<p>Of course you can use raw HTML in <code>html_document</code></p>
+<p><img src = "http://i.telegraph.co.uk/multimedia/archi
+ve/03519/potd-squirrel_3519920k.jpg", width = "50%"></p>
+<pre><code>&lt;img src = &quot;http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg&quot;, width = &quot;50%&quot;&gt;</code></pre>
+<p>For the <strong>PDF</strong> version only <code>knitr</code> offers a function which mimics the <span class="math inline">\(\LaTeX\)</span> include graphic command. This image can be reformatted easily.</p>
+<pre><code>```
+knitr::include_graphics(&quot;src/images/squirrel.jpg&quot;)
+```</code></pre>
 </div>
 <div id="quotes" class="section level2">
 <h2>Quotes</h2>
@@ -461,6 +557,7 @@ beamer (pdf slideshow)
 </div>
 <div id="links" class="section level2">
 <h2>Links</h2>
+<pre><code>[Rmarkdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)</code></pre>
 <ul>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Rmarkdown reference guide</a></li>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Rmarkdown Cheatsheet</a></li>
@@ -503,7 +600,7 @@ knitr<span class="op">::</span><span class="kw">write_bib</span>(<span class="kw
 </div>
 <div id="r-code" class="section level1">
 <h1>R Code</h1>
-<div id="embed-code" class="section level2">
+<div id="embed" class="section level2">
 <h2>Embed Code</h2>
 <p>There are 2 ways to embed code within an RMarkdown document.</p>
 <p>Inline Code: Brief code that takes place during the written part of the document.</p>
@@ -610,18 +707,37 @@ knitr::opts_chunk$set(
 ```</code></pre>
 </div>
 </div>
-<div id="emoji" class="section level2">
+<div id="emo" class="section level2">
 <h2>Emo[ji]</h2>
 <ul>
 <li><a href="https://github.com/hadley/emo">Wickham github</a></li>
 <li><a href="http://emoji.muan.co/">Emoji List</a></li>
-<li><p>😄 🇪🇺 🏄‍♀️</p>
+<li><p>😄 🇪🇺 💃🏼</p>
 <pre><code>emo::ji(&quot;smile&quot;)</code></pre></li>
 </ul>
 </div>
 <div id="tables" class="section level2">
 <h2>Tables</h2>
-<p>Depending on your desired output format different packages for beautiful tables are at disposal.</p>
+<p>Markdown has a nativ pandoc table format. This can be nonetheless sometimes inconvient to write manually tables. <a href="http://www.tablesgenerator.com/markdown_tables">Tablesgenerator</a> is website that supports you writing all sorts of table formats. Here is a Markdown table:</p>
+<pre><code>| x      | y      |
+|--------|--------|
+| Hello  | World! |</code></pre>
+<p>The result looks like:</p>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hello</td>
+<td>World!</td>
+</tr>
+</tbody>
+</table>
+<p>Depending on your desired output AND data format different packages for beautiful tables are at disposal.</p>
 <ul>
 <li><code>formattable</code>:</li>
 <li><code>kable</code>
@@ -631,8 +747,123 @@ knitr::opts_chunk$set(
 <li><code>pander</code></li>
 <li><code>xtable</code></li>
 <li><code>stargazer</code></li>
-<li><p><code>sjPlot</code></p></li>
-<li><p><a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html" class="uri">https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html</a></p></li>
+<li><code>sjPlot</code></li>
+</ul>
+<div id="kable" class="section level3">
+<h3>kable</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(knitr)
+mtcars <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">head</span>() <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">kable</span>()</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">mpg</th>
+<th align="right">cyl</th>
+<th align="right">disp</th>
+<th align="right">hp</th>
+<th align="right">drat</th>
+<th align="right">wt</th>
+<th align="right">qsec</th>
+<th align="right">vs</th>
+<th align="right">am</th>
+<th align="right">gear</th>
+<th align="right">carb</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mazda RX4</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.620</td>
+<td align="right">16.46</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td>Mazda RX4 Wag</td>
+<td align="right">21.0</td>
+<td align="right">6</td>
+<td align="right">160</td>
+<td align="right">110</td>
+<td align="right">3.90</td>
+<td align="right">2.875</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td>Datsun 710</td>
+<td align="right">22.8</td>
+<td align="right">4</td>
+<td align="right">108</td>
+<td align="right">93</td>
+<td align="right">3.85</td>
+<td align="right">2.320</td>
+<td align="right">18.61</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td>Hornet 4 Drive</td>
+<td align="right">21.4</td>
+<td align="right">6</td>
+<td align="right">258</td>
+<td align="right">110</td>
+<td align="right">3.08</td>
+<td align="right">3.215</td>
+<td align="right">19.44</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>Hornet Sportabout</td>
+<td align="right">18.7</td>
+<td align="right">8</td>
+<td align="right">360</td>
+<td align="right">175</td>
+<td align="right">3.15</td>
+<td align="right">3.440</td>
+<td align="right">17.02</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td>Valiant</td>
+<td align="right">18.1</td>
+<td align="right">6</td>
+<td align="right">225</td>
+<td align="right">105</td>
+<td align="right">2.76</td>
+<td align="right">3.460</td>
+<td align="right">20.22</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="formattable" class="section level3">
+<h3>formattable</h3>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html" class="uri">https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html</a></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(formattable)
 <span class="kw">library</span>(kableExtra)
@@ -643,9 +874,6 @@ mtcars[<span class="dv">1</span><span class="op">:</span><span class="dv">5</spa
     <span class="dt">mpg =</span> <span class="kw">color_tile</span>(<span class="st">&quot;white&quot;</span>, <span class="st">&quot;orange&quot;</span>)(mpg),
     <span class="dt">cyl =</span> <span class="kw">cell_spec</span>(cyl, <span class="st">&quot;html&quot;</span>, <span class="dt">angle =</span> (<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)<span class="op">*</span><span class="dv">60</span>, 
                     <span class="dt">background =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">align =</span> <span class="st">&quot;center&quot;</span>),
-    <span class="dt">disp =</span> <span class="kw">ifelse</span>(disp <span class="op">&gt;</span><span class="st"> </span><span class="dv">200</span>,
-                  <span class="kw">cell_spec</span>(disp, <span class="st">&quot;html&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">bold =</span> T),
-                  <span class="kw">cell_spec</span>(disp, <span class="st">&quot;html&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>, <span class="dt">italic =</span> T)),
     <span class="dt">hp =</span> <span class="kw">color_bar</span>(<span class="st">&quot;lightgreen&quot;</span>)(hp)
   ) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">select</span>(car, <span class="kw">everything</span>()) <span class="op">%&gt;%</span>
@@ -679,7 +907,7 @@ mpg
 <th style="text-align:left;">
 cyl
 </th>
-<th style="text-align:left;">
+<th style="text-align:right;">
 disp
 </th>
 <th style="text-align:left;">
@@ -698,8 +926,8 @@ Mazda RX4
 <td style="text-align:left;">
 <span style="-webkit-transform: rotate(60deg); -moz-transform: rotate(60deg); -ms-transform: rotate(60deg); -o-transform: rotate(60deg); transform: rotate(60deg); display: inline-block; "><span style="color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red;text-align: center;">6</span></span>
 </td>
-<td style="text-align:left;">
-<span style=" font-style: italic;color: green;">160</span>
+<td style="text-align:right;">
+160
 </td>
 <td style="text-align:left;width: 3cm; display: inline-block; ">
 <span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 62.86%">110</span>
@@ -715,8 +943,8 @@ Mazda RX4 Wag
 <td style="text-align:left;">
 <span style="-webkit-transform: rotate(120deg); -moz-transform: rotate(120deg); -ms-transform: rotate(120deg); -o-transform: rotate(120deg); transform: rotate(120deg); display: inline-block; "><span style="color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red;text-align: center;">6</span></span>
 </td>
-<td style="text-align:left;">
-<span style=" font-style: italic;color: green;">160</span>
+<td style="text-align:right;">
+160
 </td>
 <td style="text-align:left;width: 3cm; display: inline-block; ">
 <span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 62.86%">110</span>
@@ -732,8 +960,8 @@ Datsun 710
 <td style="text-align:left;">
 <span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); display: inline-block; "><span style="color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red;text-align: center;">4</span></span>
 </td>
-<td style="text-align:left;">
-<span style=" font-style: italic;color: green;">108</span>
+<td style="text-align:right;">
+108
 </td>
 <td style="text-align:left;width: 3cm; display: inline-block; ">
 <span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 53.14%">93</span>
@@ -749,8 +977,8 @@ Hornet 4 Drive
 <td style="text-align:left;">
 <span style="-webkit-transform: rotate(240deg); -moz-transform: rotate(240deg); -ms-transform: rotate(240deg); -o-transform: rotate(240deg); transform: rotate(240deg); display: inline-block; "><span style="color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red;text-align: center;">6</span></span>
 </td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;color: red;">258</span>
+<td style="text-align:right;">
+258
 </td>
 <td style="text-align:left;width: 3cm; display: inline-block; ">
 <span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 62.86%">110</span>
@@ -766,8 +994,8 @@ Hornet Sportabout
 <td style="text-align:left;">
 <span style="-webkit-transform: rotate(300deg); -moz-transform: rotate(300deg); -ms-transform: rotate(300deg); -o-transform: rotate(300deg); transform: rotate(300deg); display: inline-block; "><span style="color: white;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: red;text-align: center;">8</span></span>
 </td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;color: red;">360</span>
+<td style="text-align:right;">
+360
 </td>
 <td style="text-align:left;width: 3cm; display: inline-block; ">
 <span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">175</span>
@@ -776,15 +1004,194 @@ Hornet Sportabout
 </tbody>
 </table>
 </div>
+<div id="dt" class="section level3">
+<h3>DT</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mtcars <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>DT<span class="op">::</span><span class="kw">datatable</span>()</code></pre></div>
+<div id="htmlwidget-07cd639e7196672e4239" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-07cd639e7196672e4239">{"x":{"filter":"none","data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.1,120.1,318,304,350,400,79,120.3,95.1,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109],[3.9,3.9,3.85,3.08,3.15,2.76,3.21,3.69,3.92,3.92,3.92,3.07,3.07,3.07,2.93,3,3.23,4.08,4.93,4.22,3.7,2.76,3.15,3.73,3.08,4.08,4.43,3.77,4.22,3.62,3.54,4.11],[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],[16.46,17.02,18.61,19.44,17.02,20.22,15.84,20,22.9,18.3,18.9,17.4,17.6,18,17.98,17.82,17.42,19.47,18.52,19.9,20.01,16.87,17.3,15.41,17.05,18.9,16.7,16.9,14.5,15.5,14.6,18.6],[0,0,1,1,0,1,0,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,0,1,0,0,0,1],[1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1],[4,4,4,3,3,3,3,4,4,4,4,3,3,3,3,3,3,4,4,4,3,3,3,3,3,4,5,5,5,5,5,4],[4,4,1,1,2,1,4,2,2,4,4,3,3,3,4,4,4,1,2,1,1,2,2,4,2,1,2,2,4,6,8,2]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="stargazer" class="section level3">
+<h3>stargazer</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit_lm &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">runif</span>(<span class="dv">100</span>, <span class="dv">1</span>,<span class="dv">10</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">y =</span> <span class="dv">2</span><span class="op">*</span><span class="st"> </span>x) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x, <span class="dt">data =</span> .)
+
+<span class="kw">library</span>(stargazer)
+<span class="kw">stargazer</span>(fit_lm, <span class="dt">type =</span> <span class="st">&quot;html&quot;</span>, <span class="dt">header =</span> F)</code></pre></div>
+<table style="text-align:center">
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+2.000<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.000)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+-0.000<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.000)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+100
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+1.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+1.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.000 (df = 98)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+17,098,861,815,217,703,485,868,945,363,173,376.000<sup>***</sup> (df = 1; 98)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+</div>
+</div>
 <div id="html-widgets" class="section level2">
 <h2>HTML Widgets</h2>
 <ul>
 <li><a href="http://www.htmlwidgets.org/showcase_datatables.html">Showcases</a></li>
 </ul>
 <p>Here’s the link to find your favorite theme of all the <a href="http://animation.r-forge.r-project.org/knitr/">80 knitr highlight themes</a>.</p>
+<div id="highcharts" class="section level3">
+<h3>Highcharts</h3>
+<p>Start your Highcharts journey <a href="http://jkunst.com/highcharter/index.html">here</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;highcharter&quot;</span>)
+<span class="kw">data</span>(diamonds, mpg, <span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">hchart</span>(mpg, <span class="st">&quot;scatter&quot;</span>, <span class="kw">hcaes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">group =</span> class))</code></pre></div>
+<div id="htmlwidget-e285c870700719f10a96" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e285c870700719f10a96">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"hwy"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"2seater","data":[{"manufacturer":"chevrolet","model":"corvette","displ":5.7,"year":1999,"cyl":8,"trans":"manual(m6)","drv":"r","cty":16,"hwy":26,"fl":"p","class":"2seater","x":5.7,"y":26},{"manufacturer":"chevrolet","model":"corvette","displ":5.7,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":15,"hwy":23,"fl":"p","class":"2seater","x":5.7,"y":23},{"manufacturer":"chevrolet","model":"corvette","displ":6.2,"year":2008,"cyl":8,"trans":"manual(m6)","drv":"r","cty":16,"hwy":26,"fl":"p","class":"2seater","x":6.2,"y":26},{"manufacturer":"chevrolet","model":"corvette","displ":6.2,"year":2008,"cyl":8,"trans":"auto(s6)","drv":"r","cty":15,"hwy":25,"fl":"p","class":"2seater","x":6.2,"y":25},{"manufacturer":"chevrolet","model":"corvette","displ":7,"year":2008,"cyl":8,"trans":"manual(m6)","drv":"r","cty":15,"hwy":24,"fl":"p","class":"2seater","x":7,"y":24}],"type":"scatter"},{"name":"compact","data":[{"manufacturer":"audi","model":"a4","displ":1.8,"year":1999,"cyl":4,"trans":"auto(l5)","drv":"f","cty":18,"hwy":29,"fl":"p","class":"compact","x":1.8,"y":29},{"manufacturer":"audi","model":"a4","displ":1.8,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"p","class":"compact","x":1.8,"y":29},{"manufacturer":"audi","model":"a4","displ":2,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"f","cty":20,"hwy":31,"fl":"p","class":"compact","x":2,"y":31},{"manufacturer":"audi","model":"a4","displ":2,"year":2008,"cyl":4,"trans":"auto(av)","drv":"f","cty":21,"hwy":30,"fl":"p","class":"compact","x":2,"y":30},{"manufacturer":"audi","model":"a4","displ":2.8,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"f","cty":16,"hwy":26,"fl":"p","class":"compact","x":2.8,"y":26},{"manufacturer":"audi","model":"a4","displ":2.8,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":18,"hwy":26,"fl":"p","class":"compact","x":2.8,"y":26},{"manufacturer":"audi","model":"a4","displ":3.1,"year":2008,"cyl":6,"trans":"auto(av)","drv":"f","cty":18,"hwy":27,"fl":"p","class":"compact","x":3.1,"y":27},{"manufacturer":"audi","model":"a4 quattro","displ":1.8,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"4","cty":18,"hwy":26,"fl":"p","class":"compact","x":1.8,"y":26},{"manufacturer":"audi","model":"a4 quattro","displ":1.8,"year":1999,"cyl":4,"trans":"auto(l5)","drv":"4","cty":16,"hwy":25,"fl":"p","class":"compact","x":1.8,"y":25},{"manufacturer":"audi","model":"a4 quattro","displ":2,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"4","cty":20,"hwy":28,"fl":"p","class":"compact","x":2,"y":28},{"manufacturer":"audi","model":"a4 quattro","displ":2,"year":2008,"cyl":4,"trans":"auto(s6)","drv":"4","cty":19,"hwy":27,"fl":"p","class":"compact","x":2,"y":27},{"manufacturer":"audi","model":"a4 quattro","displ":2.8,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"4","cty":15,"hwy":25,"fl":"p","class":"compact","x":2.8,"y":25},{"manufacturer":"audi","model":"a4 quattro","displ":2.8,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":17,"hwy":25,"fl":"p","class":"compact","x":2.8,"y":25},{"manufacturer":"audi","model":"a4 quattro","displ":3.1,"year":2008,"cyl":6,"trans":"auto(s6)","drv":"4","cty":17,"hwy":25,"fl":"p","class":"compact","x":3.1,"y":25},{"manufacturer":"audi","model":"a4 quattro","displ":3.1,"year":2008,"cyl":6,"trans":"manual(m6)","drv":"4","cty":15,"hwy":25,"fl":"p","class":"compact","x":3.1,"y":25},{"manufacturer":"nissan","model":"altima","displ":2.4,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"compact","x":2.4,"y":29},{"manufacturer":"nissan","model":"altima","displ":2.4,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":19,"hwy":27,"fl":"r","class":"compact","x":2.4,"y":27},{"manufacturer":"subaru","model":"impreza awd","displ":2.5,"year":2008,"cyl":4,"trans":"auto(s4)","drv":"4","cty":20,"hwy":25,"fl":"p","class":"compact","x":2.5,"y":25},{"manufacturer":"subaru","model":"impreza awd","displ":2.5,"year":2008,"cyl":4,"trans":"auto(s4)","drv":"4","cty":20,"hwy":27,"fl":"r","class":"compact","x":2.5,"y":27},{"manufacturer":"subaru","model":"impreza awd","displ":2.5,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"4","cty":19,"hwy":25,"fl":"p","class":"compact","x":2.5,"y":25},{"manufacturer":"subaru","model":"impreza awd","displ":2.5,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"4","cty":20,"hwy":27,"fl":"r","class":"compact","x":2.5,"y":27},{"manufacturer":"toyota","model":"camry solara","displ":2.2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":21,"hwy":27,"fl":"r","class":"compact","x":2.2,"y":27},{"manufacturer":"toyota","model":"camry solara","displ":2.2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"compact","x":2.2,"y":29},{"manufacturer":"toyota","model":"camry solara","displ":2.4,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":31,"fl":"r","class":"compact","x":2.4,"y":31},{"manufacturer":"toyota","model":"camry solara","displ":2.4,"year":2008,"cyl":4,"trans":"auto(s5)","drv":"f","cty":22,"hwy":31,"fl":"r","class":"compact","x":2.4,"y":31},{"manufacturer":"toyota","model":"camry solara","displ":3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"compact","x":3,"y":26},{"manufacturer":"toyota","model":"camry solara","displ":3,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"compact","x":3,"y":26},{"manufacturer":"toyota","model":"camry solara","displ":3.3,"year":2008,"cyl":6,"trans":"auto(s5)","drv":"f","cty":18,"hwy":27,"fl":"r","class":"compact","x":3.3,"y":27},{"manufacturer":"toyota","model":"corolla","displ":1.8,"year":1999,"cyl":4,"trans":"auto(l3)","drv":"f","cty":24,"hwy":30,"fl":"r","class":"compact","x":1.8,"y":30},{"manufacturer":"toyota","model":"corolla","displ":1.8,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":24,"hwy":33,"fl":"r","class":"compact","x":1.8,"y":33},{"manufacturer":"toyota","model":"corolla","displ":1.8,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":26,"hwy":35,"fl":"r","class":"compact","x":1.8,"y":35},{"manufacturer":"toyota","model":"corolla","displ":1.8,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"f","cty":28,"hwy":37,"fl":"r","class":"compact","x":1.8,"y":37},{"manufacturer":"toyota","model":"corolla","displ":1.8,"year":2008,"cyl":4,"trans":"auto(l4)","drv":"f","cty":26,"hwy":35,"fl":"r","class":"compact","x":1.8,"y":35},{"manufacturer":"volkswagen","model":"gti","displ":2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"compact","x":2,"y":29},{"manufacturer":"volkswagen","model":"gti","displ":2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":19,"hwy":26,"fl":"r","class":"compact","x":2,"y":26},{"manufacturer":"volkswagen","model":"gti","displ":2,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"f","cty":21,"hwy":29,"fl":"p","class":"compact","x":2,"y":29},{"manufacturer":"volkswagen","model":"gti","displ":2,"year":2008,"cyl":4,"trans":"auto(s6)","drv":"f","cty":22,"hwy":29,"fl":"p","class":"compact","x":2,"y":29},{"manufacturer":"volkswagen","model":"gti","displ":2.8,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"compact","x":2.8,"y":24},{"manufacturer":"volkswagen","model":"jetta","displ":1.9,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":33,"hwy":44,"fl":"d","class":"compact","x":1.9,"y":44},{"manufacturer":"volkswagen","model":"jetta","displ":2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"compact","x":2,"y":29},{"manufacturer":"volkswagen","model":"jetta","displ":2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":19,"hwy":26,"fl":"r","class":"compact","x":2,"y":26},{"manufacturer":"volkswagen","model":"jetta","displ":2,"year":2008,"cyl":4,"trans":"auto(s6)","drv":"f","cty":22,"hwy":29,"fl":"p","class":"compact","x":2,"y":29},{"manufacturer":"volkswagen","model":"jetta","displ":2,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"f","cty":21,"hwy":29,"fl":"p","class":"compact","x":2,"y":29},{"manufacturer":"volkswagen","model":"jetta","displ":2.5,"year":2008,"cyl":5,"trans":"auto(s6)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"compact","x":2.5,"y":29},{"manufacturer":"volkswagen","model":"jetta","displ":2.5,"year":2008,"cyl":5,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"compact","x":2.5,"y":29},{"manufacturer":"volkswagen","model":"jetta","displ":2.8,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":16,"hwy":23,"fl":"r","class":"compact","x":2.8,"y":23},{"manufacturer":"volkswagen","model":"jetta","displ":2.8,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"compact","x":2.8,"y":24}],"type":"scatter"},{"name":"midsize","data":[{"manufacturer":"audi","model":"a6 quattro","displ":2.8,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"4","cty":15,"hwy":24,"fl":"p","class":"midsize","x":2.8,"y":24},{"manufacturer":"audi","model":"a6 quattro","displ":3.1,"year":2008,"cyl":6,"trans":"auto(s6)","drv":"4","cty":17,"hwy":25,"fl":"p","class":"midsize","x":3.1,"y":25},{"manufacturer":"audi","model":"a6 quattro","displ":4.2,"year":2008,"cyl":8,"trans":"auto(s6)","drv":"4","cty":16,"hwy":23,"fl":"p","class":"midsize","x":4.2,"y":23},{"manufacturer":"chevrolet","model":"malibu","displ":2.4,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":19,"hwy":27,"fl":"r","class":"midsize","x":2.4,"y":27},{"manufacturer":"chevrolet","model":"malibu","displ":2.4,"year":2008,"cyl":4,"trans":"auto(l4)","drv":"f","cty":22,"hwy":30,"fl":"r","class":"midsize","x":2.4,"y":30},{"manufacturer":"chevrolet","model":"malibu","displ":3.1,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":3.1,"y":26},{"manufacturer":"chevrolet","model":"malibu","displ":3.5,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":29,"fl":"r","class":"midsize","x":3.5,"y":29},{"manufacturer":"chevrolet","model":"malibu","displ":3.6,"year":2008,"cyl":6,"trans":"auto(s6)","drv":"f","cty":17,"hwy":26,"fl":"r","class":"midsize","x":3.6,"y":26},{"manufacturer":"hyundai","model":"sonata","displ":2.4,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":2.4,"y":26},{"manufacturer":"hyundai","model":"sonata","displ":2.4,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":18,"hwy":27,"fl":"r","class":"midsize","x":2.4,"y":27},{"manufacturer":"hyundai","model":"sonata","displ":2.4,"year":2008,"cyl":4,"trans":"auto(l4)","drv":"f","cty":21,"hwy":30,"fl":"r","class":"midsize","x":2.4,"y":30},{"manufacturer":"hyundai","model":"sonata","displ":2.4,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":31,"fl":"r","class":"midsize","x":2.4,"y":31},{"manufacturer":"hyundai","model":"sonata","displ":2.5,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":2.5,"y":26},{"manufacturer":"hyundai","model":"sonata","displ":2.5,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":2.5,"y":26},{"manufacturer":"hyundai","model":"sonata","displ":3.3,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"f","cty":19,"hwy":28,"fl":"r","class":"midsize","x":3.3,"y":28},{"manufacturer":"nissan","model":"altima","displ":2.5,"year":2008,"cyl":4,"trans":"auto(av)","drv":"f","cty":23,"hwy":31,"fl":"r","class":"midsize","x":2.5,"y":31},{"manufacturer":"nissan","model":"altima","displ":2.5,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"f","cty":23,"hwy":32,"fl":"r","class":"midsize","x":2.5,"y":32},{"manufacturer":"nissan","model":"altima","displ":3.5,"year":2008,"cyl":6,"trans":"manual(m6)","drv":"f","cty":19,"hwy":27,"fl":"p","class":"midsize","x":3.5,"y":27},{"manufacturer":"nissan","model":"altima","displ":3.5,"year":2008,"cyl":6,"trans":"auto(av)","drv":"f","cty":19,"hwy":26,"fl":"p","class":"midsize","x":3.5,"y":26},{"manufacturer":"nissan","model":"maxima","displ":3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":3,"y":26},{"manufacturer":"nissan","model":"maxima","displ":3,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":19,"hwy":25,"fl":"r","class":"midsize","x":3,"y":25},{"manufacturer":"nissan","model":"maxima","displ":3.5,"year":2008,"cyl":6,"trans":"auto(av)","drv":"f","cty":19,"hwy":25,"fl":"p","class":"midsize","x":3.5,"y":25},{"manufacturer":"pontiac","model":"grand prix","displ":3.1,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":3.1,"y":26},{"manufacturer":"pontiac","model":"grand prix","displ":3.8,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":16,"hwy":26,"fl":"p","class":"midsize","x":3.8,"y":26},{"manufacturer":"pontiac","model":"grand prix","displ":3.8,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":17,"hwy":27,"fl":"r","class":"midsize","x":3.8,"y":27},{"manufacturer":"pontiac","model":"grand prix","displ":3.8,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":28,"fl":"r","class":"midsize","x":3.8,"y":28},{"manufacturer":"pontiac","model":"grand prix","displ":5.3,"year":2008,"cyl":8,"trans":"auto(s4)","drv":"f","cty":16,"hwy":25,"fl":"p","class":"midsize","x":5.3,"y":25},{"manufacturer":"toyota","model":"camry","displ":2.2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"midsize","x":2.2,"y":29},{"manufacturer":"toyota","model":"camry","displ":2.2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":21,"hwy":27,"fl":"r","class":"midsize","x":2.2,"y":27},{"manufacturer":"toyota","model":"camry","displ":2.4,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":31,"fl":"r","class":"midsize","x":2.4,"y":31},{"manufacturer":"toyota","model":"camry","displ":2.4,"year":2008,"cyl":4,"trans":"auto(l5)","drv":"f","cty":21,"hwy":31,"fl":"r","class":"midsize","x":2.4,"y":31},{"manufacturer":"toyota","model":"camry","displ":3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":3,"y":26},{"manufacturer":"toyota","model":"camry","displ":3,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":18,"hwy":26,"fl":"r","class":"midsize","x":3,"y":26},{"manufacturer":"toyota","model":"camry","displ":3.5,"year":2008,"cyl":6,"trans":"auto(s6)","drv":"f","cty":19,"hwy":28,"fl":"r","class":"midsize","x":3.5,"y":28},{"manufacturer":"volkswagen","model":"passat","displ":1.8,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"p","class":"midsize","x":1.8,"y":29},{"manufacturer":"volkswagen","model":"passat","displ":1.8,"year":1999,"cyl":4,"trans":"auto(l5)","drv":"f","cty":18,"hwy":29,"fl":"p","class":"midsize","x":1.8,"y":29},{"manufacturer":"volkswagen","model":"passat","displ":2,"year":2008,"cyl":4,"trans":"auto(s6)","drv":"f","cty":19,"hwy":28,"fl":"p","class":"midsize","x":2,"y":28},{"manufacturer":"volkswagen","model":"passat","displ":2,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"f","cty":21,"hwy":29,"fl":"p","class":"midsize","x":2,"y":29},{"manufacturer":"volkswagen","model":"passat","displ":2.8,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"f","cty":16,"hwy":26,"fl":"p","class":"midsize","x":2.8,"y":26},{"manufacturer":"volkswagen","model":"passat","displ":2.8,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"f","cty":18,"hwy":26,"fl":"p","class":"midsize","x":2.8,"y":26},{"manufacturer":"volkswagen","model":"passat","displ":3.6,"year":2008,"cyl":6,"trans":"auto(s6)","drv":"f","cty":17,"hwy":26,"fl":"p","class":"midsize","x":3.6,"y":26}],"type":"scatter"},{"name":"minivan","data":[{"manufacturer":"dodge","model":"caravan 2wd","displ":2.4,"year":1999,"cyl":4,"trans":"auto(l3)","drv":"f","cty":18,"hwy":24,"fl":"r","class":"minivan","x":2.4,"y":24},{"manufacturer":"dodge","model":"caravan 2wd","displ":3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"minivan","x":3,"y":24},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":16,"hwy":22,"fl":"r","class":"minivan","x":3.3,"y":22},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":16,"hwy":22,"fl":"r","class":"minivan","x":3.3,"y":22},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.3,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"minivan","x":3.3,"y":24},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.3,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"minivan","x":3.3,"y":24},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.3,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"f","cty":11,"hwy":17,"fl":"e","class":"minivan","x":3.3,"y":17},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.8,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":15,"hwy":22,"fl":"r","class":"minivan","x":3.8,"y":22},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.8,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"f","cty":15,"hwy":21,"fl":"r","class":"minivan","x":3.8,"y":21},{"manufacturer":"dodge","model":"caravan 2wd","displ":3.8,"year":2008,"cyl":6,"trans":"auto(l6)","drv":"f","cty":16,"hwy":23,"fl":"r","class":"minivan","x":3.8,"y":23},{"manufacturer":"dodge","model":"caravan 2wd","displ":4,"year":2008,"cyl":6,"trans":"auto(l6)","drv":"f","cty":16,"hwy":23,"fl":"r","class":"minivan","x":4,"y":23}],"type":"scatter"},{"name":"pickup","data":[{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":3.7,"year":2008,"cyl":6,"trans":"manual(m6)","drv":"4","cty":15,"hwy":19,"fl":"r","class":"pickup","x":3.7,"y":19},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":3.7,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"4","cty":14,"hwy":18,"fl":"r","class":"pickup","x":3.7,"y":18},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":3.9,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"pickup","x":3.9,"y":17},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":3.9,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"pickup","x":3.9,"y":17},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":14,"hwy":19,"fl":"r","class":"pickup","x":4.7,"y":19},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":14,"hwy":19,"fl":"r","class":"pickup","x":4.7,"y":19},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":9,"hwy":12,"fl":"e","class":"pickup","x":4.7,"y":12},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":5.2,"year":1999,"cyl":8,"trans":"manual(m5)","drv":"4","cty":11,"hwy":17,"fl":"r","class":"pickup","x":5.2,"y":17},{"manufacturer":"dodge","model":"dakota pickup 4wd","displ":5.2,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"pickup","x":5.2,"y":15},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"manual(m6)","drv":"4","cty":12,"hwy":16,"fl":"r","class":"pickup","x":4.7,"y":16},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":9,"hwy":12,"fl":"e","class":"pickup","x":4.7,"y":12},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"pickup","x":4.7,"y":17},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"pickup","x":4.7,"y":17},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"manual(m6)","drv":"4","cty":12,"hwy":16,"fl":"r","class":"pickup","x":4.7,"y":16},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"manual(m6)","drv":"4","cty":9,"hwy":12,"fl":"e","class":"pickup","x":4.7,"y":12},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":5.2,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"pickup","x":5.2,"y":15},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":5.2,"year":1999,"cyl":8,"trans":"manual(m5)","drv":"4","cty":11,"hwy":16,"fl":"r","class":"pickup","x":5.2,"y":16},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":5.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"pickup","x":5.7,"y":17},{"manufacturer":"dodge","model":"ram 1500 pickup 4wd","displ":5.9,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"pickup","x":5.9,"y":15},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":4.2,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"pickup","x":4.2,"y":17},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":4.2,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"pickup","x":4.2,"y":17},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":4.6,"year":1999,"cyl":8,"trans":"manual(m5)","drv":"4","cty":13,"hwy":16,"fl":"r","class":"pickup","x":4.6,"y":16},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":4.6,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":13,"hwy":16,"fl":"r","class":"pickup","x":4.6,"y":16},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":4.6,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"pickup","x":4.6,"y":17},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":5.4,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"pickup","x":5.4,"y":15},{"manufacturer":"ford","model":"f150 pickup 4wd","displ":5.4,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"pickup","x":5.4,"y":17},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":2.7,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"4","cty":15,"hwy":20,"fl":"r","class":"pickup","x":2.7,"y":20},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":2.7,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"4","cty":16,"hwy":20,"fl":"r","class":"pickup","x":2.7,"y":20},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":2.7,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"4","cty":17,"hwy":22,"fl":"r","class":"pickup","x":2.7,"y":22},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":3.4,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":15,"hwy":17,"fl":"r","class":"pickup","x":3.4,"y":17},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":3.4,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":15,"hwy":19,"fl":"r","class":"pickup","x":3.4,"y":19},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":4,"year":2008,"cyl":6,"trans":"manual(m6)","drv":"4","cty":15,"hwy":18,"fl":"r","class":"pickup","x":4,"y":18},{"manufacturer":"toyota","model":"toyota tacoma 4wd","displ":4,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":16,"hwy":20,"fl":"r","class":"pickup","x":4,"y":20}],"type":"scatter"},{"name":"subcompact","data":[{"manufacturer":"ford","model":"mustang","displ":3.8,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"r","cty":18,"hwy":26,"fl":"r","class":"subcompact","x":3.8,"y":26},{"manufacturer":"ford","model":"mustang","displ":3.8,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"r","cty":18,"hwy":25,"fl":"r","class":"subcompact","x":3.8,"y":25},{"manufacturer":"ford","model":"mustang","displ":4,"year":2008,"cyl":6,"trans":"manual(m5)","drv":"r","cty":17,"hwy":26,"fl":"r","class":"subcompact","x":4,"y":26},{"manufacturer":"ford","model":"mustang","displ":4,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"r","cty":16,"hwy":24,"fl":"r","class":"subcompact","x":4,"y":24},{"manufacturer":"ford","model":"mustang","displ":4.6,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":15,"hwy":21,"fl":"r","class":"subcompact","x":4.6,"y":21},{"manufacturer":"ford","model":"mustang","displ":4.6,"year":1999,"cyl":8,"trans":"manual(m5)","drv":"r","cty":15,"hwy":22,"fl":"r","class":"subcompact","x":4.6,"y":22},{"manufacturer":"ford","model":"mustang","displ":4.6,"year":2008,"cyl":8,"trans":"manual(m5)","drv":"r","cty":15,"hwy":23,"fl":"r","class":"subcompact","x":4.6,"y":23},{"manufacturer":"ford","model":"mustang","displ":4.6,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"r","cty":15,"hwy":22,"fl":"r","class":"subcompact","x":4.6,"y":22},{"manufacturer":"ford","model":"mustang","displ":5.4,"year":2008,"cyl":8,"trans":"manual(m6)","drv":"r","cty":14,"hwy":20,"fl":"p","class":"subcompact","x":5.4,"y":20},{"manufacturer":"honda","model":"civic","displ":1.6,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":28,"hwy":33,"fl":"r","class":"subcompact","x":1.6,"y":33},{"manufacturer":"honda","model":"civic","displ":1.6,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":24,"hwy":32,"fl":"r","class":"subcompact","x":1.6,"y":32},{"manufacturer":"honda","model":"civic","displ":1.6,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":25,"hwy":32,"fl":"r","class":"subcompact","x":1.6,"y":32},{"manufacturer":"honda","model":"civic","displ":1.6,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":23,"hwy":29,"fl":"p","class":"subcompact","x":1.6,"y":29},{"manufacturer":"honda","model":"civic","displ":1.6,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":24,"hwy":32,"fl":"r","class":"subcompact","x":1.6,"y":32},{"manufacturer":"honda","model":"civic","displ":1.8,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"f","cty":26,"hwy":34,"fl":"r","class":"subcompact","x":1.8,"y":34},{"manufacturer":"honda","model":"civic","displ":1.8,"year":2008,"cyl":4,"trans":"auto(l5)","drv":"f","cty":25,"hwy":36,"fl":"r","class":"subcompact","x":1.8,"y":36},{"manufacturer":"honda","model":"civic","displ":1.8,"year":2008,"cyl":4,"trans":"auto(l5)","drv":"f","cty":24,"hwy":36,"fl":"c","class":"subcompact","x":1.8,"y":36},{"manufacturer":"honda","model":"civic","displ":2,"year":2008,"cyl":4,"trans":"manual(m6)","drv":"f","cty":21,"hwy":29,"fl":"p","class":"subcompact","x":2,"y":29},{"manufacturer":"hyundai","model":"tiburon","displ":2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":19,"hwy":26,"fl":"r","class":"subcompact","x":2,"y":26},{"manufacturer":"hyundai","model":"tiburon","displ":2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":19,"hwy":29,"fl":"r","class":"subcompact","x":2,"y":29},{"manufacturer":"hyundai","model":"tiburon","displ":2,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"f","cty":20,"hwy":28,"fl":"r","class":"subcompact","x":2,"y":28},{"manufacturer":"hyundai","model":"tiburon","displ":2,"year":2008,"cyl":4,"trans":"auto(l4)","drv":"f","cty":20,"hwy":27,"fl":"r","class":"subcompact","x":2,"y":27},{"manufacturer":"hyundai","model":"tiburon","displ":2.7,"year":2008,"cyl":6,"trans":"auto(l4)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"subcompact","x":2.7,"y":24},{"manufacturer":"hyundai","model":"tiburon","displ":2.7,"year":2008,"cyl":6,"trans":"manual(m6)","drv":"f","cty":16,"hwy":24,"fl":"r","class":"subcompact","x":2.7,"y":24},{"manufacturer":"hyundai","model":"tiburon","displ":2.7,"year":2008,"cyl":6,"trans":"manual(m5)","drv":"f","cty":17,"hwy":24,"fl":"r","class":"subcompact","x":2.7,"y":24},{"manufacturer":"subaru","model":"impreza awd","displ":2.2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"4","cty":21,"hwy":26,"fl":"r","class":"subcompact","x":2.2,"y":26},{"manufacturer":"subaru","model":"impreza awd","displ":2.2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"4","cty":19,"hwy":26,"fl":"r","class":"subcompact","x":2.2,"y":26},{"manufacturer":"subaru","model":"impreza awd","displ":2.5,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"4","cty":19,"hwy":26,"fl":"r","class":"subcompact","x":2.5,"y":26},{"manufacturer":"subaru","model":"impreza awd","displ":2.5,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"4","cty":19,"hwy":26,"fl":"r","class":"subcompact","x":2.5,"y":26},{"manufacturer":"volkswagen","model":"new beetle","displ":1.9,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":35,"hwy":44,"fl":"d","class":"subcompact","x":1.9,"y":44},{"manufacturer":"volkswagen","model":"new beetle","displ":1.9,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":29,"hwy":41,"fl":"d","class":"subcompact","x":1.9,"y":41},{"manufacturer":"volkswagen","model":"new beetle","displ":2,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"f","cty":21,"hwy":29,"fl":"r","class":"subcompact","x":2,"y":29},{"manufacturer":"volkswagen","model":"new beetle","displ":2,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"f","cty":19,"hwy":26,"fl":"r","class":"subcompact","x":2,"y":26},{"manufacturer":"volkswagen","model":"new beetle","displ":2.5,"year":2008,"cyl":5,"trans":"manual(m5)","drv":"f","cty":20,"hwy":28,"fl":"r","class":"subcompact","x":2.5,"y":28},{"manufacturer":"volkswagen","model":"new beetle","displ":2.5,"year":2008,"cyl":5,"trans":"auto(s6)","drv":"f","cty":20,"hwy":29,"fl":"r","class":"subcompact","x":2.5,"y":29}],"type":"scatter"},{"name":"suv","data":[{"manufacturer":"chevrolet","model":"c1500 suburban 2wd","displ":5.3,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"r","cty":14,"hwy":20,"fl":"r","class":"suv","x":5.3,"y":20},{"manufacturer":"chevrolet","model":"c1500 suburban 2wd","displ":5.3,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"r","cty":11,"hwy":15,"fl":"e","class":"suv","x":5.3,"y":15},{"manufacturer":"chevrolet","model":"c1500 suburban 2wd","displ":5.3,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"r","cty":14,"hwy":20,"fl":"r","class":"suv","x":5.3,"y":20},{"manufacturer":"chevrolet","model":"c1500 suburban 2wd","displ":5.7,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":13,"hwy":17,"fl":"r","class":"suv","x":5.7,"y":17},{"manufacturer":"chevrolet","model":"c1500 suburban 2wd","displ":6,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"r","cty":12,"hwy":17,"fl":"r","class":"suv","x":6,"y":17},{"manufacturer":"chevrolet","model":"k1500 tahoe 4wd","displ":5.3,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"4","cty":14,"hwy":19,"fl":"r","class":"suv","x":5.3,"y":19},{"manufacturer":"chevrolet","model":"k1500 tahoe 4wd","displ":5.3,"year":2008,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":14,"fl":"e","class":"suv","x":5.3,"y":14},{"manufacturer":"chevrolet","model":"k1500 tahoe 4wd","displ":5.7,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"suv","x":5.7,"y":15},{"manufacturer":"chevrolet","model":"k1500 tahoe 4wd","displ":6.5,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":14,"hwy":17,"fl":"d","class":"suv","x":6.5,"y":17},{"manufacturer":"dodge","model":"durango 4wd","displ":3.9,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"suv","x":3.9,"y":17},{"manufacturer":"dodge","model":"durango 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"suv","x":4.7,"y":17},{"manufacturer":"dodge","model":"durango 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":9,"hwy":12,"fl":"e","class":"suv","x":4.7,"y":12},{"manufacturer":"dodge","model":"durango 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"suv","x":4.7,"y":17},{"manufacturer":"dodge","model":"durango 4wd","displ":5.2,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":16,"fl":"r","class":"suv","x":5.2,"y":16},{"manufacturer":"dodge","model":"durango 4wd","displ":5.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":18,"fl":"r","class":"suv","x":5.7,"y":18},{"manufacturer":"dodge","model":"durango 4wd","displ":5.9,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"suv","x":5.9,"y":15},{"manufacturer":"ford","model":"expedition 2wd","displ":4.6,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":11,"hwy":17,"fl":"r","class":"suv","x":4.6,"y":17},{"manufacturer":"ford","model":"expedition 2wd","displ":5.4,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":11,"hwy":17,"fl":"r","class":"suv","x":5.4,"y":17},{"manufacturer":"ford","model":"expedition 2wd","displ":5.4,"year":2008,"cyl":8,"trans":"auto(l6)","drv":"r","cty":12,"hwy":18,"fl":"r","class":"suv","x":5.4,"y":18},{"manufacturer":"ford","model":"explorer 4wd","displ":4,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"suv","x":4,"y":17},{"manufacturer":"ford","model":"explorer 4wd","displ":4,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":15,"hwy":19,"fl":"r","class":"suv","x":4,"y":19},{"manufacturer":"ford","model":"explorer 4wd","displ":4,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"suv","x":4,"y":17},{"manufacturer":"ford","model":"explorer 4wd","displ":4,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":13,"hwy":19,"fl":"r","class":"suv","x":4,"y":19},{"manufacturer":"ford","model":"explorer 4wd","displ":4.6,"year":2008,"cyl":8,"trans":"auto(l6)","drv":"4","cty":13,"hwy":19,"fl":"r","class":"suv","x":4.6,"y":19},{"manufacturer":"ford","model":"explorer 4wd","displ":5,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"suv","x":5,"y":17},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":3,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":17,"hwy":22,"fl":"d","class":"suv","x":3,"y":22},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":3.7,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":15,"hwy":19,"fl":"r","class":"suv","x":3.7,"y":19},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":4,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":15,"hwy":20,"fl":"r","class":"suv","x":4,"y":20},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":4.7,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"suv","x":4.7,"y":17},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":9,"hwy":12,"fl":"e","class":"suv","x":4.7,"y":12},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":14,"hwy":19,"fl":"r","class":"suv","x":4.7,"y":19},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":5.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":13,"hwy":18,"fl":"r","class":"suv","x":5.7,"y":18},{"manufacturer":"jeep","model":"grand cherokee 4wd","displ":6.1,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":11,"hwy":14,"fl":"p","class":"suv","x":6.1,"y":14},{"manufacturer":"land rover","model":"range rover","displ":4,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"p","class":"suv","x":4,"y":15},{"manufacturer":"land rover","model":"range rover","displ":4.2,"year":2008,"cyl":8,"trans":"auto(s6)","drv":"4","cty":12,"hwy":18,"fl":"r","class":"suv","x":4.2,"y":18},{"manufacturer":"land rover","model":"range rover","displ":4.4,"year":2008,"cyl":8,"trans":"auto(s6)","drv":"4","cty":12,"hwy":18,"fl":"r","class":"suv","x":4.4,"y":18},{"manufacturer":"land rover","model":"range rover","displ":4.6,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"p","class":"suv","x":4.6,"y":15},{"manufacturer":"lincoln","model":"navigator 2wd","displ":5.4,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":11,"hwy":17,"fl":"r","class":"suv","x":5.4,"y":17},{"manufacturer":"lincoln","model":"navigator 2wd","displ":5.4,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"r","cty":11,"hwy":16,"fl":"p","class":"suv","x":5.4,"y":16},{"manufacturer":"lincoln","model":"navigator 2wd","displ":5.4,"year":2008,"cyl":8,"trans":"auto(l6)","drv":"r","cty":12,"hwy":18,"fl":"r","class":"suv","x":5.4,"y":18},{"manufacturer":"mercury","model":"mountaineer 4wd","displ":4,"year":1999,"cyl":6,"trans":"auto(l5)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"suv","x":4,"y":17},{"manufacturer":"mercury","model":"mountaineer 4wd","displ":4,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":13,"hwy":19,"fl":"r","class":"suv","x":4,"y":19},{"manufacturer":"mercury","model":"mountaineer 4wd","displ":4.6,"year":2008,"cyl":8,"trans":"auto(l6)","drv":"4","cty":13,"hwy":19,"fl":"r","class":"suv","x":4.6,"y":19},{"manufacturer":"mercury","model":"mountaineer 4wd","displ":5,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":13,"hwy":17,"fl":"r","class":"suv","x":5,"y":17},{"manufacturer":"nissan","model":"pathfinder 4wd","displ":3.3,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"suv","x":3.3,"y":17},{"manufacturer":"nissan","model":"pathfinder 4wd","displ":3.3,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":15,"hwy":17,"fl":"r","class":"suv","x":3.3,"y":17},{"manufacturer":"nissan","model":"pathfinder 4wd","displ":4,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":14,"hwy":20,"fl":"p","class":"suv","x":4,"y":20},{"manufacturer":"nissan","model":"pathfinder 4wd","displ":5.6,"year":2008,"cyl":8,"trans":"auto(s5)","drv":"4","cty":12,"hwy":18,"fl":"p","class":"suv","x":5.6,"y":18},{"manufacturer":"subaru","model":"forester awd","displ":2.5,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"4","cty":18,"hwy":25,"fl":"r","class":"suv","x":2.5,"y":25},{"manufacturer":"subaru","model":"forester awd","displ":2.5,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"4","cty":18,"hwy":24,"fl":"r","class":"suv","x":2.5,"y":24},{"manufacturer":"subaru","model":"forester awd","displ":2.5,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"4","cty":20,"hwy":27,"fl":"r","class":"suv","x":2.5,"y":27},{"manufacturer":"subaru","model":"forester awd","displ":2.5,"year":2008,"cyl":4,"trans":"manual(m5)","drv":"4","cty":19,"hwy":25,"fl":"p","class":"suv","x":2.5,"y":25},{"manufacturer":"subaru","model":"forester awd","displ":2.5,"year":2008,"cyl":4,"trans":"auto(l4)","drv":"4","cty":20,"hwy":26,"fl":"r","class":"suv","x":2.5,"y":26},{"manufacturer":"subaru","model":"forester awd","displ":2.5,"year":2008,"cyl":4,"trans":"auto(l4)","drv":"4","cty":18,"hwy":23,"fl":"p","class":"suv","x":2.5,"y":23},{"manufacturer":"toyota","model":"4runner 4wd","displ":2.7,"year":1999,"cyl":4,"trans":"manual(m5)","drv":"4","cty":15,"hwy":20,"fl":"r","class":"suv","x":2.7,"y":20},{"manufacturer":"toyota","model":"4runner 4wd","displ":2.7,"year":1999,"cyl":4,"trans":"auto(l4)","drv":"4","cty":16,"hwy":20,"fl":"r","class":"suv","x":2.7,"y":20},{"manufacturer":"toyota","model":"4runner 4wd","displ":3.4,"year":1999,"cyl":6,"trans":"auto(l4)","drv":"4","cty":15,"hwy":19,"fl":"r","class":"suv","x":3.4,"y":19},{"manufacturer":"toyota","model":"4runner 4wd","displ":3.4,"year":1999,"cyl":6,"trans":"manual(m5)","drv":"4","cty":15,"hwy":17,"fl":"r","class":"suv","x":3.4,"y":17},{"manufacturer":"toyota","model":"4runner 4wd","displ":4,"year":2008,"cyl":6,"trans":"auto(l5)","drv":"4","cty":16,"hwy":20,"fl":"r","class":"suv","x":4,"y":20},{"manufacturer":"toyota","model":"4runner 4wd","displ":4.7,"year":2008,"cyl":8,"trans":"auto(l5)","drv":"4","cty":14,"hwy":17,"fl":"r","class":"suv","x":4.7,"y":17},{"manufacturer":"toyota","model":"land cruiser wagon 4wd","displ":4.7,"year":1999,"cyl":8,"trans":"auto(l4)","drv":"4","cty":11,"hwy":15,"fl":"r","class":"suv","x":4.7,"y":15},{"manufacturer":"toyota","model":"land cruiser wagon 4wd","displ":5.7,"year":2008,"cyl":8,"trans":"auto(s6)","drv":"4","cty":13,"hwy":18,"fl":"r","class":"suv","x":5.7,"y":18}],"type":"scatter"}],"xAxis":{"type":"linear","title":{"text":"displ"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="leaflet" class="section level3">
+<h3>Leaflet</h3>
+<ul>
+<li><a href="http://rstudio.github.io/leaflet/">Leaflet vignette</a></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(leaflet)
+
+logo &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/systats/awesomeRmarkdown/master/src/images/logo.png&quot;</span>
+
+m &lt;-<span class="st"> </span><span class="kw">leaflet</span>() <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">addTiles</span>() <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">addMarkers</span>(
+    <span class="dt">lat =</span> <span class="fl">48.7807802</span>, 
+    <span class="dt">lng =</span> <span class="fl">9.1717973</span>, 
+    <span class="dt">popup =</span> <span class="st">&quot;R User Group Stuttgart Meetup Location&quot;</span>,
+    <span class="dt">icon =</span> <span class="kw">makeIcon</span>(
+        <span class="dt">iconUrl =</span> logo,
+        <span class="dt">iconWidth =</span> <span class="dv">90</span>, 
+        <span class="dt">iconHeight =</span> <span class="dv">100</span>)
+  ) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">addProviderTiles</span>(providers<span class="op">$</span>Stamen.Toner)
+m  <span class="co"># Print the map</span></code></pre></div>
+<div id="htmlwidget-2bfe293c25b97c71a7ce" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2bfe293c25b97c71a7ce">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[48.7807802,9.1717973,{"iconUrl":{"data":"https://raw.githubusercontent.com/systats/awesomeRmarkdown/master/src/images/logo.png","index":0},"iconWidth":90,"iconHeight":100},null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"R User Group Stuttgart Meetup Location",null,null,null,null,null,null]},{"method":"addProviderTiles","args":["Stamen.Toner",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]}],"limits":{"lat":[48.7807802,48.7807802],"lng":[9.1717973,9.1717973]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<div id="standalone-projects" class="section level1">
+</div>
+<div id="projects" class="section level1">
 <h1>Standalone Projects</h1>
 <div id="notebooks" class="section level2">
 <h2>Notebooks</h2>
@@ -794,9 +1201,15 @@ Hornet Sportabout
 </div>
 <div id="flexdashboard" class="section level2">
 <h2>Flexdashboard</h2>
+<ul>
+<li><a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a> Easy interactive dashboards for R</li>
+</ul>
 </div>
 <div id="mindmaps" class="section level2">
 <h2>Mindmaps</h2>
+<ul>
+<li><a href="https://github.com/pzhaonet/mindr">mindr</a></li>
+</ul>
 </div>
 <div id="website" class="section level2">
 <h2>Website</h2>
@@ -806,24 +1219,33 @@ Hornet Sportabout
 </div>
 <div id="blogs" class="section level2">
 <h2>Blogs</h2>
+<ul>
+<li><a href="https://github.com/rstudio/blogdown">Blogdown</a></li>
+</ul>
 </div>
 <div id="slides" class="section level2">
 <h2>Slides</h2>
+<ul>
+<li><a href="http://rmarkdown.rstudio.com/r_notebooks.html">R Notebooks</a></li>
+</ul>
 </div>
 <div id="books" class="section level2">
 <h2>Books</h2>
 <ul>
 <li><a href="https://bookdown.org/">Bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown-demo">download and start!</a></li>
 </ul>
 </div>
-<div id="music-notes" class="section level2">
-<h2>Music Notes</h2>
 </div>
-</div>
-<div id="ui-extensions" class="section level1">
-<h1>UI Extensions</h1>
+<div id="advanced" class="section level1">
+<h1>Advanced</h1>
 <div id="semantic-ui" class="section level2">
 <h2>Semantic UI</h2>
+<ul>
+<li><a href="https://github.com/Appsilon/shiny.semantic">shiny.semantic (wrapper)</a></li>
+<li><a href="https://semantic-ui.com/">Semantic UI Library</a></li>
+<li><a href="http://fontawesome.io/icons/">fontawesome</a></li>
+</ul>
 <!-- <!--- tabset --->
 <p>–&gt; <!-- ## Sales Report {.tabset} --> <!-- ### By Product --></p>
 <!-- (tab content) -->

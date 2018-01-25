@@ -1,0 +1,296 @@
+---
+title: "Paraboost: XGboost vs H2O GBM"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    social: menu
+    source_code: embed
+    vertical_layout: fill
+    theme: readable
+    logo: logo45.png
+    favicon: logo45.png
+---
+
+<!-- "cerulean", "journal", "flatly", "readable", "spacelab", "united", "cosmo", "lumen", "paper", "sandstone", "simplex", "yeti" -->
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+pacman::p_load(rtweet, tidyverse, dplyr, ggplot2, stringr, Quandl, scales, lubridate, tidytext, tidyr, ggthemes, timetk, caret, xgboost)
+```
+
+
+Data
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### 1. Data 
+
+```{r, eval = T, echo = F}
+hprize_train <- read.csv("train.csv", stringsAsFactors = F)
+DT::datatable(hprize_train)
+```
+
+### Missing Values
+
+```{r}
+plot_Missing <- function(x, title = NULL){
+  temp_df <- x %>%
+    is.na() %>%
+    ifelse(., 0, 1) %>%  
+    as.data.frame() 
+  temp_df <- temp_df[,order(colSums(temp_df))]
+  data_temp <- expand.grid(list(x = 1:nrow(temp_df), y = colnames(temp_df)))
+  data_temp$m <- as.vector(as.matrix(temp_df))
+  p1 <- data.frame(
+    x = unlist(data_temp$x), 
+    y = unlist(data_temp$y), 
+    m = unlist(data_temp$m)
+  ) %>%
+  ggplot() + 
+    geom_tile(aes(x=x, y=y, fill=factor(m))) + 
+    scale_fill_manual(values=c("white", "black"), name="Missing\n(0=Yes, 1=No)") +
+    theme_light() + 
+    labs(x="", y="") + 
+    ggtitle(title)
+  return(p1)
+}
+selected <- colSums(is.na(hprize_train)) > 0
+plot_Missing(hprize_train[,selected])
+```
+
+EDA
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### geom_smooth with Loess Smoothed Fit
+
+```{r}
+tabplot::tableplot(hprize_train[,1:10])
+```
+
+### Multivariate Imputation by Chain Equation(FCS)
+
+```{r, eval = T}
+library(mice)
+tempData <- mice(
+  hprize_train,
+  m = 5,
+  maxit = 50,
+  meth = 'pmm',
+  seed = 1234,
+  printFlag = FALSE
+)
+
+imputed <- complete(tempData, 1)
+plot(tempData)
+```
+
+* [dplyr & tidyr notebook](https://jules32.github.io/2016-07-12-Oxford/dplyr_tidyr/)
+
+```{r}
+#skimr
+library(dummies)
+library(janitor)
+cleaned <- imputed %>%
+  # janitor
+  clean_names() %>%
+  select(which(colMeans(is.na(.)) < 0.5)) %>%
+  #select(which(colVar(., na.rm=TRUE)!=0)) %>%
+  remove_empty_rows() %>%
+  remove_empty_cols() %>%
+  # dplyr
+  mutate_if(.predicate = is.character, .funs = as.factor) %>%
+  mutate_if(.predicate = is.integer, .funs = as.numeric) 
+
+# dummies
+hprize_label <- cleaned %>%
+  select(yearbuilt) %>%
+  dummies::dummy.data.frame()
+
+hprize_metric <- cleaned %>%
+  select_if(.predicate = is.numeric)
+```
+
+
+```{r, eval = F}
+options(scipen = 999)
+hist(imputed_num$SalePrice)
+hist(log(imputed_num$SalePrice))
+```
+
+
+xgboost
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### Info
+
+* written in C++
+* wisdom of a (weighted) crowd of experts
+* interfaces in R, Python, Java, Julia
+* Ensemble trees
+    + Parallel: Random Forests
+    + Interative: Boosting
+* Steps:
+    1. Calculate Error Function and gradient of the current ensemble
+    2. Add a new tree to fit error: take a step along the gradient
+* eXtreme Gradient Boosting (for higher accuracy)
+    + $L_1$ and $L_2$ regularization (avoid overfitting)
+    + Using first and second order gradient (converges faster)
+    + Prune on a fully binary tree (parameterized trees)
+
+### Add Conditional Density Curves to Plot
+
+```{r, eval = T}
+# prepare data
+train_sample <- createDataPartition(
+  y = hprize_metric$saleprice,
+  p = 0.80, 
+  list = FALSE
+)
+
+y <- hprize_metric[train_sample, "saleprice"] %>%
+  as.numeric() %>%
+  as.matrix() %>%
+  data.matrix()
+
+
+train_metric <- hprize_metric[train_sample,] %>% 
+  select(-saleprice) %>%
+  as.matrix() %>%
+  data.matrix()
+
+# train_label <- hprize_label[train_sample, ] %>% 
+#   select(-saleprice) %>% 
+#   mutate(y = hprize_metric[train_sample, "saleprice"]) %>%
+#   as.matrix() %>%
+#   data.matrix()
+```
+
+
+```{r, eval = T, echo = T}
+xg_machine <- xgboost(
+  data = train_metric,
+  label = y,
+  booster = "gblinear",
+  objective = "reg:linear",
+  max.depth = 20,
+  nround = 10000,
+  lambda = 0,
+  lambda_bias = 0,
+  alpha = 0,
+  missing = NA,
+  verbose = 0
+)
+```
+
+
+Row
+-----------------------------------------------------------------------
+
+### Info
+
+```{r}
+# get the trained model
+model <- xgb.dump(xg_machine, with_stats = T)
+model[1:10]
+# get the feature real names
+# compute feature importance matrix
+importance_matrix <- xgb.importance(dimnames(train_metric)[[2]], model=xg_machine)
+
+
+library(forcats)
+library(ggplot2)
+#forcats::fct_inorder()
+
+importance_matrix %>%
+  filter(abs(Weight) > 100) %>%
+  mutate(Weight = abs(Weight)) %>%
+  mutate(Feature = fct_reorder(Feature, Weight)) %>%
+  ggplot(aes(Feature, Weight)) +
+  geom_bar(stat = "identity") +
+  coord_flip()
+```
+
+
+### Info
+
+
+
+H2O gbm
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### Info
+
+### Code
+
+```{r}
+library(h2o)
+library(magrittr)
+
+#h2o::h2o.init(nthreads = -1)
+
+h2o_data <- cleaned %>%
+  rename(y = saleprice) %>%
+  #as.matrix() %>%
+  as.h2o()
+
+class(h2o_data)
+
+splits <- h2o.splitFrame(
+  h2o_data, 
+  ratios = c(0.6, 0.2), 
+  seed = 2017)   #partition data into 60%, 20%, 20% chunks
+
+train <- splits[[1]]
+validation <- splits[[2]]
+test <- splits[[3]]
+y <- "y"
+x <- setdiff(colnames(train), y)
+```
+
+```{r}
+library(h2o)
+# There are a few ways to assemble a list of models to stack toegether:
+# 1. Train individual models and put them in a list
+# 2. Train a grid of models
+# 3. Train several grids of models
+# Note: All base models must have the same cross-validation folds and
+# the cross-validated predicted values must be kept.
+# 1. Generate a 2-model ensemble (GBM + RF)
+# Train & Cross-validate a GBM
+model_gbm <- h2o.gbm(
+  x = x,
+  y = y,
+  training_frame = train,
+  distribution = "gaussian",
+  ntrees = 5,
+  #max_depth = 3,
+  #min_rows = 2,
+  #learn_rate = 0.2,
+  nfolds = 5,
+  fold_assignment = "Modulo",
+  keep_cross_validation_predictions = T,
+  seed = 2017
+)
+
+h2o.performance(model_gbm, newdata = test)
+library(forcats)
+h2o.varimp(model_gbm) %>%
+  filter(relative_importance > 1) %>%
+  arrange(scaled_importance) %>%
+  mutate(variable = fct_reorder(variable, scaled_importance)) %>%
+  ggplot(aes(variable, scaled_importance)) +
+  geom_bar(stat = "identity") +
+  coord_flip()
+```
+

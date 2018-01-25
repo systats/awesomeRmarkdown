@@ -7,7 +7,7 @@ output:
     self_contained: no
     code_folding: hide
     theme: flatly
-    highlight: "espresso"
+    highlight: "tango"
     css: src/css/style.css
 ---
 
@@ -70,8 +70,6 @@ Reproducible research is one possible product of dynamic documents, however, it 
 * Always Set your seed.
 * Always include session information in the code file. For example, you can use devtools::session_info().
 * To read more about reproducibility and data management check out Vince Buffalo’s Book(Buffalo, 2015).
-
-
 * `ggplot2`
 * [``](https://github.com/hadley/healthyr_preamble)
 
@@ -82,9 +80,13 @@ The Markdown and figure documents are then processed by the tool pandoc, which c
 <img src = "src/images/process2.png" width = "60% align = "center">
 
 
-# Rmarkdown
+# (R)Markdown {#rmarkdown}
 
-To fully understand RMarkdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:
+Philosophy ...
+
+> A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber.
+
+To fully understand R Markdown, we first need to cover Markdown, which is a system for writing simple, readable text that is easily converted to HTML. Markdown essentially is two things:
 
 A plain text formatting syntax
 A software tool written in Perl.
@@ -106,7 +108,7 @@ Der YAML header bestimmt wie das Dokument kompeliert wird. YAML stands for “YA
 ![](src/images/rmd_outputs.png)
 
 
-Zur Auswahl stehen verschiedene Standardformate. Some code and output. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.
+Zur Auswahl stehen verschiedene Standardformate. Neben diesen drei Typischen Formaten stehen Erweiterungen für HTML bereit.
 
 
 ```{r, echo = F}
@@ -132,21 +134,64 @@ dat %>%
   formattable::format_table(caption = "Standard Outputs delivered by Rmarkdown")
 ```
 
-## Output Formats
 
 
-* [HTML Text Formatting **w3schools**](https://www.w3schools.com/html/html_formatting.asp)
+## Headers 
+
+**Setext-style**: A setext-style header is a line of text underlined with a row of = signs (level 1) or - signs (for level 2). This often used in Dashboard applications. 
+
+    A level-one header
+    ==================
+    
+    A level-two header
+    ------------------
+
+**ATX-style**: extend up to six `#` signs at the beginning of the line is the header level. ATX can include text formatting. 
+
+    ## A level-one header
+    
+    ### A level-two header *emphasis*
 
 
+A ATX Header allows header_attributes
+which can be assigned using the following syntax at the end of the header line:
 
-## Sections 
+    # Section {#identifier .class .class key=value key=value}    
+
+If you specified the YAML option `number_sections: true` you can disable the numbering for a specific header:
+
+    # My header {-}
+
+is just the same as
+    
+    # My header {.unnumbered}
 
 
-    # 1. Überschrift (section)
-    ## 2. Unterüberschrift (subsection)
-    ### 3. Unterunterüberschrift (subsubsection)
+## Tabbed Sections {#tabbed .tabset}
+
+### Content
+
+![](https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/26195772_1804502472955084_5942461602219045405_n.jpg?oh=8403c13075dcccd2415a1becdf5f1e94&oe=5AEF4107)
+
+Please like our Meme Page on Facebook and Twitter to get the latest update on the mimetic warfare. 
 
 
+### Code
+
+This is the code for this double tab
+
+    ### Tabbed Sections {.tabset}
+    
+    #### Content
+    
+    Content 1 ...
+    
+    #### Code
+    
+    Content 2 ...
+
+
+<br>
 ## Lists
 
     * First bullet point
@@ -180,32 +225,37 @@ Let’s make an ordered list:
     * Subtopic (2 tabs or 4 spaces)
 
 
-## Text Highlighting
+## Text Highlighting {#highlight}
 
     *kurisver Text*
     **fetter Text**
     ~~durchgestrichener Text~~
 
 
-ergibt
-
 * *kurisver Text*
 * **fetter Text**
 * ~~durchgestrichener Text~~
 
+If you work in a HTML document, you can use raw HTML in your Markdown File. A brief introduction can be found [here](* [HTML Text Formatting **w3schools**](https://www.w3schools.com/html/html_formatting.asp).
+
+
 ## Formula
 
-Superscript^2^
+In Markdown you can do easy Subscript~2~ and Superscript^2^ with any additional concepts. If you want to write full mathematical equations MathJax is waiting for you.
 
-Subscript~2~
+Any Rmd format is able to incorporate $\LaTeX$ formula in the document. You can do inline code like *the average income in this region is* $\bar x = 1.32$. This is done by 
 
-Egal welches Output-Format, Rmd kann $\LaTeX$ Formeln ausgeben. Ein beiebiger Mittelwert beträgt $\bar x = 1.32$, während eine Regressionsmodell die Form annimmt:
+    *the average income in this region is* $\bar x = 1.32$.
+
+You can also create standalone formula
 
 $$y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i $$
 
-ganz einfach 
+This is easily done ... 
 
     $$y_i = \beta_0 + \beta_1 x_{1i} + \varepsilon_i $$
+  
+Some other Inspirations can be found in the following table or on these links...
 
 | Description        | Code                                                               | Output                                                           |
 |--------------------|--------------------------------------------------------------------|------------------------------------------------------------------|
@@ -217,13 +267,32 @@ ganz einfach
 
 ## Images
 
-External images
+You can source external images also for all RMD output formats via (weblink)
+
+    ![](http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg)
 
 ![](http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg)
 
-Für HTML hat man auch die Möglichkeit *plain* (reines) HTML zu verwenden.
+or from your local image folder:
 
-<img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "80%">
+    ![](src/images/squirrel.jpg)
+
+<img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "70%">
+
+Of course you can use raw HTML in `html_document`
+
+<img src = "http://i.telegraph.co.uk/multimedia/archi
+ve/03519/potd-squirrel_3519920k.jpg", width = "50%">
+    
+    <img src = "http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg", width = "50%">
+
+
+For the **PDF** version only `knitr` offers a function which mimics the $\LaTeX$ include graphic command. This image can be reformatted easily. 
+
+    ```
+    knitr::include_graphics("src/images/squirrel.jpg")
+    ```
+
 
 ## Quotes
 
@@ -234,6 +303,7 @@ Für HTML hat man auch die Möglichkeit *plain* (reines) HTML zu verwenden.
 
 ## Links
 
+    [Rmarkdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 
 * [Rmarkdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 * [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
@@ -281,11 +351,9 @@ If you would like to cite R packages, knitr even includes a function called writ
 knitr::write_bib(c("knitr", "ggplot2"), file = "r-packages2.bib")
 ```
 
-
-
 # R Code
 
-## Embed Code
+## Embed Code {#embed}
 
 There are 2 ways to embed code within an RMarkdown document.
 
@@ -346,11 +414,11 @@ You may wish to have the same chunk settings throughout your document and so it 
     ```
 
 
-## Emo[ji]
+## Emo[ji] {#emo}
 
 * [Wickham github](https://github.com/hadley/emo)
 * [Emoji List](http://emoji.muan.co/)
-* `r emo::ji("smile")` `r emo::ji("eu")` `r emo::ji("female")`
+* `r emo::ji("smile")` `r emo::ji("eu")` `r emo::ji("dancing")`
 
     ```
     emo::ji("smile")
@@ -358,7 +426,19 @@ You may wish to have the same chunk settings throughout your document and so it 
 
 ## Tables
 
-Depending on your desired output format different packages for beautiful tables are at disposal. 
+Markdown has a nativ pandoc table format. This can be nonetheless sometimes inconvient to write manually tables. [Tablesgenerator](http://www.tablesgenerator.com/markdown_tables) is website that supports you writing all sorts of table formats. Here is a Markdown table:
+
+    | x      | y      |
+    |--------|--------|
+    | Hello  | World! |
+
+The result looks like:
+
+| x      | y      |
+|--------|--------|
+| Hello  | World! |
+
+Depending on your desired output AND data format different packages for beautiful tables are at disposal. 
 
 * `formattable`:
 * `kable`
@@ -368,6 +448,18 @@ Depending on your desired output format different packages for beautiful tables 
 * `stargazer`
 * `sjPlot`
 
+
+### kable
+
+```{r}
+library(knitr)
+mtcars %>%
+  head() %>%
+  kable()
+```
+
+
+### formattable
 
 * https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
 
@@ -382,9 +474,6 @@ mtcars[1:5, 1:4] %>%
     mpg = color_tile("white", "orange")(mpg),
     cyl = cell_spec(cyl, "html", angle = (1:5)*60, 
                     background = "red", color = "white", align = "center"),
-    disp = ifelse(disp > 200,
-                  cell_spec(disp, "html", color = "red", bold = T),
-                  cell_spec(disp, "html", color = "green", italic = T)),
     hp = color_bar("lightgreen")(hp)
   ) %>%
   select(car, everything()) %>%
@@ -394,15 +483,68 @@ mtcars[1:5, 1:4] %>%
   add_header_above(c(" ", "Hello" = 2, "World" = 2))
 ```
 
+### DT
 
-## HTML Widgets
+```{r}
+mtcars %>% 
+  DT::datatable()
+```
+
+### stargazer
+
+```{r stargazer, results='asis'}
+fit_lm <- data.frame(x = runif(100, 1,10)) %>%
+  mutate(y = 2* x) %>%
+  lm(y ~ x, data = .)
+
+library(stargazer)
+stargazer(fit_lm, type = "html", header = F)
+```
+
+
+## HTML Widgets {#html-widgets}
 
 * [Showcases](http://www.htmlwidgets.org/showcase_datatables.html)
 
 Here’s the link to find your favorite theme of all the [80 knitr highlight themes](http://animation.r-forge.r-project.org/knitr/).
 
+### Highcharts
 
-# Standalone Projects
+Start your Highcharts journey [here](http://jkunst.com/highcharter/index.html).
+
+```{r}
+library("highcharter")
+data(diamonds, mpg, package = "ggplot2")
+hchart(mpg, "scatter", hcaes(x = displ, y = hwy, group = class))
+```
+
+### Leaflet
+
+* [Leaflet vignette](http://rstudio.github.io/leaflet/)
+
+```{r}
+library(leaflet)
+
+logo <- "https://raw.githubusercontent.com/systats/awesomeRmarkdown/master/src/images/logo.png"
+
+m <- leaflet() %>%
+  addTiles() %>% 
+  addMarkers(
+    lat = 48.7807802, 
+    lng = 9.1717973, 
+    popup = "R User Group Stuttgart Meetup Location",
+    icon = makeIcon(
+        iconUrl = logo,
+        iconWidth = 90, 
+        iconHeight = 100)
+  ) %>%
+  addProviderTiles(providers$Stamen.Toner)
+m  # Print the map
+```
+
+
+
+# Standalone Projects {#projects}
 
 ## Notebooks
 
@@ -410,7 +552,11 @@ Here’s the link to find your favorite theme of all the [80 knitr highlight the
 
 ## Flexdashboard
 
+* [flexdashboard](http://rmarkdown.rstudio.com/flexdashboard/) Easy interactive dashboards for R
+
 ## Mindmaps
+
+* [mindr](https://github.com/pzhaonet/mindr)
 
 ## Website
 
@@ -419,18 +565,24 @@ Here’s the link to find your favorite theme of all the [80 knitr highlight the
 
 ## Blogs
 
+* [Blogdown](https://github.com/rstudio/blogdown)
+
 ## Slides
+
+* [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
 
 ## Books
 
 * [Bookdown](https://bookdown.org/)
+* [download and start!](https://github.com/rstudio/bookdown-demo)
 
-
-## Music Notes
-
-# UI Extensions
+# Advanced
 
 ## Semantic UI
+
+* [shiny.semantic (wrapper)](https://github.com/Appsilon/shiny.semantic)
+* [Semantic UI Library](https://semantic-ui.com/)
+* [fontawesome](http://fontawesome.io/icons/)
 
 <!-- <!--- tabset ---> -->
 <!-- ## Sales Report {.tabset} -->
